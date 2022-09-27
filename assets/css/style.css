@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Oswald&display=swap');
+
+
 body {
     box-sizing: border-box;
     margin: 0;
@@ -7,31 +10,47 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-image: url(../images/football.pitch.jpeg);
+    overflow-x: hidden;
 }
 
 .hero-text {
-    margin: 50px;
+    font-size: 2.5rem;
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+.ball-img {
+    width: 20vh;
+    height: 20vh;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
 }
 
 #quiz-container {
     height: 50vh;
     width: 80vw;
     border: 1px solid black;
-    margin: auto;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    border-radius: 10px;
+    background-color: azure;
+    
 }
 
 #question {
-    margin: 50px;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
 }
 
 .button-group > button {
     width: 80vw;
     height: 6vh;
     margin-top: 15px;
+    border-radius: 10px;
 }
 
 .control-buttons {
