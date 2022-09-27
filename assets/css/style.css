@@ -48,7 +48,7 @@ body {
 
 .button-group > button {
     width: 80vw;
-    height: 6vh;
+    height: 7vh;
     margin-top: 15px;
     border-radius: 10px;
 }
@@ -60,4 +60,9 @@ body {
 
 .control-buttons > button {
     margin: 10px;
+}
+
+#score {
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
