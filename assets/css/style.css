@@ -59,7 +59,7 @@ body {
 }
 
 .control-buttons > button {
-    margin: 10px;
+    margin: 25px;
     width: 60vw;
     height: 5vh;
     border-radius: 10px;
@@ -78,7 +78,7 @@ body {
     display: none;
 }
 
-.name-input {
+#name-input {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,7 +88,7 @@ body {
 .name-input > label {
     font-size: 2rem;
     font-family: 'Oswald', sans-serif;
-    margin-top: 50px;
+    margin-top: 75px;
 }
 
 input[type=text] {
