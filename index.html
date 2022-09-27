@@ -17,18 +17,22 @@
     <section>
         <div class="main-container">
             <div id="quiz-container">
-                <div id="question">Question Placeholder</div>
-                <div id="answer-buttons" class="button-group">
+                <div class="name-input">
+                    <label for="username" aria-label="Enter your username">Enter your username</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div id="question" class="hide">Question Placeholder</div>
+                <div id="answer-buttons" class="button-group hide">
                     <button id="btn-1" class="ans-btns">1</button>
                     <button id="btn-2" class="ans-btns">2</button>
                     <button id="btn-3" class="ans-btns">3</button>
                     <button id="btn-4" class="ans-btns">4</button>
                 </div>
-                <div id="score">Score:</div>
+                <div id="score" class="hide">Score:</div>
             </div>
             <div class="control-buttons">
                 <button id="start-btn">Start</button>
-                <button id="restart-btn">Restart</button>
+                <button id="restart-btn" class="hide">Restart</button>
             </div>
         </div>
     </section>
