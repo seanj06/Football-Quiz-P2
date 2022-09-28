@@ -10,13 +10,63 @@ const userName = document.getElementById('username');
 const inputField = document.getElementById('name-input');
 const nameLabel = document.getElementById('name-label');
 // Quiz Container
-const questionText = document.getElementById('question');
+const questionElement = document.getElementById('question');
 const answerButtons = document.getElementById('answer-buttons');
-const score = document.getElementById('score');
+const scoreText = document.getElementById('score');
 // Variables needed to display questions
 let shuffleQuestions;
 let currentQuestion;
 let shuffleAnswers;
+let currentScore = 0;
+
+// Runs startGame function when start button is clicked
+
+startButton.addEventListener('click', startGame);
+
+/**
+ * Gets value of input username,checks if it is 3 characters or more and hides all relevant elements to start game
+ */
+function startGame() {
+    let userNameText = document.getElementById('username').value;
+    if (userNameText.length >= 3) {
+        alert(`Welcome to the quiz ${userNameText}`);
+        startButton.classList.add('hide');
+        userName.classList.add('hide');
+        nameLabel.classList.add('hide');
+        score.classList.remove('hide');
+        nextButton.classList.remove('hide');
+        questionElement.classList.remove('hide');
+        answerButtons.classList.remove('hide');
+        // Shuffles the questions to give a random array
+        shuffleQuestions = questions.sort(() => Math.random() - .5);
+        // Sorts the answers array to match up with the shuffled question
+        shuffleAnswers = shuffleQuestions[0].answers.sort(() => Math.random() - .5);
+        currentQuestion = 0;
+        currentScore = 0;
+        
+    } else {
+        alert("Please enter a valid username with 3 characters or more.")
+    }
+}
+
+
+function setNextQuestion() {
+    displayQuestion(shuffleQuestions[currentQuestion]);
+}
+
+function displayQuestion(question) {
+    questionElement.innerText = question.question;
+    question.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
+        if(answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener('click', selectAnswer);
+    })
+}
+
 
 // Quiz questions
 
@@ -238,36 +288,3 @@ const questions = [{
 
 
 ]
-
-
-// Runs startGame function when start button is clicked
-
-startButton.addEventListener('click', startGame);
-
-/**
- * Gets value of input username,checks if it is 3 characters or more and hides all relevant elements to start game
- */
-function startGame() {
-    let userNameText = document.getElementById('username').value;
-    if (userNameText.length >= 3) {
-        alert(`Welcome to the quiz ${userNameText}`);
-        startButton.classList.add('hide');
-        userName.classList.add('hide');
-        nameLabel.classList.add('hide');
-        score.classList.remove('hide');
-        nextButton.classList.remove('hide');
-        questionText.classList.remove('hide');
-        answerButtons.classList.remove('hide');
-        // Shuffles the questions to give a random array
-        shuffleQuestions = questions.sort(() => Math.random() - .5);
-        // Sorts the answers array to match up with the shuffled question
-        shuffleAnswers = shuffleQuestions[0].answers.sort(() => Math.random() - .5);
-        currentQuestion = 0;
-        displayQuestion();
-    } else {
-        alert("Please enter a valid username with 3 characters or more.")
-    }
-}
-
-
-function displayQuestion()
