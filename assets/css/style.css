@@ -64,7 +64,7 @@ body {
     justify-content: center;
 }
 
-.control-buttons > button {
+.btn {
     margin: 25px;
     width: 60vw;
     height: 5vh;
