@@ -18,6 +18,7 @@ let shuffleQuestions;
 let currentQuestion;
 let shuffleAnswers;
 let currentScore = 0;
+let correctAnswer = 0;
 
 // Runs startGame function when start button is clicked
 
@@ -26,6 +27,7 @@ nextButton.addEventListener('click', () => {
     currentQuestion++;
     setNextQuestion();
 })
+
 
 /**
  * Gets value of input username,checks if it is 3 characters or more and hides all relevant elements to start game
@@ -37,7 +39,6 @@ function startGame() {
         startButton.classList.add('hide');
         userName.classList.add('hide');
         nameLabel.classList.add('hide');
-        score.classList.remove('hide');
         nextButton.classList.remove('hide');
         questionElement.classList.remove('hide');
         answerButtons.classList.remove('hide');
@@ -81,7 +82,9 @@ function showQuestion(question) {
 function selectAnswer(e) {
     const selectedAnswer = e.target;
     const correct = selectedAnswer.dataset.correct;
-    setStatusClass(document.body, correct);
+    if(selectedAnswer.dataset.correct) {
+        currentScore += 1;
+    }
     Array.from(answerButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
@@ -89,6 +92,8 @@ function selectAnswer(e) {
         nextButton.classList.remove('hide');
     } else {
         restartButton.classList.remove('hide');
+        scoreText.classList.remove('hide');
+        scoreText.innerText = `Well done you got ${currentScore} out of ${currentQuestion + 1} questions right`
     }
 
 }
