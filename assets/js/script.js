@@ -57,7 +57,10 @@ function startGame() {
     }
 }
 
-
+/**
+ * Uses the resetState function to remove any answers and question from the previous question
+ * and adds the new shuffled question
+ */
 function setNextQuestion() {
     resetState();
     showQuestion(shuffleQuestions[currentQuestion])
@@ -81,6 +84,12 @@ function showQuestion(question) {
     })
 }
 
+ /**
+  * Checks that the users clicked answer has the dataset of correct and if it is increments current score by 1
+  * Checks that there is still questions to be displayed and if not gives the user a total score with a message 
+  * and shows the restartbutton.
+  */
+ 
 function selectAnswer(e) {
     const selectedAnswer = e.target;
     const correct = selectedAnswer.dataset.correct;
@@ -106,7 +115,9 @@ function selectAnswer(e) {
 
 
 }
-
+/**
+ * Shows correct and incorrect answers by color after user click
+ */
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
@@ -116,11 +127,17 @@ function setStatusClass(element, correct) {
     }
 }
 
+/**
+ * Removes the color status for the next question
+ */
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
 }
 
+/**
+ * Sets currentquestion and currentscore to zero, hides and shows button elements needed to restart the quiz
+ */
 function restartGame() {
     currentQuestion = 0;
     currentScore = 0;
