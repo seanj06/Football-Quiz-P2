@@ -82,7 +82,7 @@ function showQuestion(question) {
 function selectAnswer(e) {
     const selectedAnswer = e.target;
     const correct = selectedAnswer.dataset.correct;
-    if(selectedAnswer.dataset.correct) {
+    if (selectedAnswer.dataset.correct) {
         currentScore += 1;
     }
     Array.from(answerButtons.children).forEach(button => {
@@ -93,8 +93,15 @@ function selectAnswer(e) {
     } else {
         restartButton.classList.remove('hide');
         scoreText.classList.remove('hide');
-        scoreText.innerText = `Well done you got ${currentScore} out of ${currentQuestion + 1} questions right`
+        if (currentScore < 4) {
+            scoreText.innerText = `Better luck next time you got ${currentScore} out of ${currentQuestion + 1} correct`
+        } else if (currentScore < 7) {
+            scoreText.innerText = `Not bad you got ${currentScore} out of ${currentQuestion} correct`
+        } else {
+            scoreText.innerText = `Well done you got ${currentScore} out of ${currentQuestion + 1} questions correct`
+        }
     }
+
 
 }
 
