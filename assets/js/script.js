@@ -43,6 +43,7 @@ function startGame() {
         shuffleAnswers = shuffleQuestions[0].answers.sort(() => Math.random() - .5);
         currentQuestion = 0;
         currentScore = 0;
+        setNextQuestion();
         
     } else {
         alert("Please enter a valid username with 3 characters or more.")
@@ -51,20 +52,11 @@ function startGame() {
 
 
 function setNextQuestion() {
-    displayQuestion(shuffleQuestions[currentQuestion]);
+    showQuestion(shuffleQuestions[currentQuestion])
 }
 
-function displayQuestion(question) {
+function showQuestion(question) {
     questionElement.innerText = question.question;
-    question.answers.forEach(answer => {
-        const button = document.createElement('button');
-        button.innerText = answer.text;
-        button.classList.add('btn');
-        if(answer.correct) {
-            button.dataset.correct = answer.correct;
-        }
-        button.addEventListener('click', selectAnswer);
-    })
 }
 
 
