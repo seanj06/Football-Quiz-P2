@@ -22,6 +22,10 @@ let currentScore = 0;
 // Runs startGame function when start button is clicked
 
 startButton.addEventListener('click', startGame);
+nextButton.addEventListener('click', () => {
+    currentQuestion++;
+    setNextQuestion();
+})
 
 /**
  * Gets value of input username,checks if it is 3 characters or more and hides all relevant elements to start game
@@ -81,6 +85,12 @@ function selectAnswer(e) {
     Array.from(answerButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
+    if (shuffleQuestions.length > currentQuestion + 1) {
+        nextButton.classList.remove('hide');
+    } else {
+        restartButton.classList.remove('hide');
+    }
+
 }
 
 function setStatusClass(element, correct) {
@@ -153,19 +163,19 @@ const questions = [{
     {
         question: "Which country won the first ever World Cup in 1930?",
         answers: [{
-                value: "Brazil",
+                text: "Brazil",
                 correct: false
             },
             {
-                value: "Spain",
+                text: "Spain",
                 correct: false
             },
             {
-                value: "Uruguay",
+                text: "Uruguay",
                 correct: true
             },
             {
-                value: "Mexico",
+                text: "Mexico",
                 correct: false
             },
         ]
@@ -175,19 +185,19 @@ const questions = [{
     {
         question: "The record number of World Cup goals is 16, scored by who?",
         answers: [{
-                value: "Miraslav Klose",
+                text: "Miraslav Klose",
                 correct: true
             },
             {
-                value: "Pele",
+                text: "Pele",
                 correct: false
             },
             {
-                value: "Thomas Muller",
+                text: "Thomas Muller",
                 correct: false
             },
             {
-                value: "Lionel Messi",
+                text: "Lionel Messi",
                 correct: false
             },
         ]
@@ -197,19 +207,19 @@ const questions = [{
     {
         question: "Which Spanish club's nickname is Los Colchoneros, which translates to English as 'The Mattress Makers'?",
         answers: [{
-                value: "Espanyol",
+                text: "Espanyol",
                 correct: false
             },
             {
-                value: "Real Vallodid",
+                text: "Real Vallodid",
                 correct: false
             },
             {
-                value: "Valencia",
+                text: "Valencia",
                 correct: false
             },
             {
-                value: "Athletico Madrid",
+                text: "Athletico Madrid",
                 correct: true
             },
         ]
@@ -219,19 +229,19 @@ const questions = [{
     {
         question: "Messi has spent his entire professional career at Barcelona, but what was his schoolboy team?",
         answers: [{
-                value: "Newells Old Boys",
+                text: "Newells Old Boys",
                 correct: true
             },
             {
-                value: "River Plate",
+                text: "River Plate",
                 correct: false
             },
             {
-                value: "Boca Juniors",
+                text: "Boca Juniors",
                 correct: false
             },
             {
-                value: "Chacarita Juniors",
+                text: "Chacarita Juniors",
                 correct: false
             },
         ]
@@ -241,19 +251,19 @@ const questions = [{
     {
         question: "Who is the only player to win the Champions League with three different clubs?",
         answers: [{
-                value: "Clarence Seedorf",
+                text: "Clarence Seedorf",
                 correct: true
             },
             {
-                value: "Zlatan Ibrahimovic",
+                text: "Zlatan Ibrahimovic",
                 correct: false
             },
             {
-                value: "Kaka",
+                text: "Kaka",
                 correct: false
             },
             {
-                value: "Luis Figo",
+                text: "Luis Figo",
                 correct: false
             },
         ]
@@ -263,19 +273,19 @@ const questions = [{
     {
         question: "Which team was the first from the UK to win the European Cup?",
         answers: [{
-                value: "Manchester United",
+                text: "Manchester United",
                 correct: false
             },
             {
-                value: "Celtic",
+                text: "Celtic",
                 correct: true
             },
             {
-                value: "Nottingham Forrest",
+                text: "Nottingham Forrest",
                 correct: false
             },
             {
-                value: "Liverpool",
+                text: "Liverpool",
                 correct: false
             },
         ]
@@ -285,19 +295,19 @@ const questions = [{
     {
         question: "After Juventus, AC Milan and Inter, which team has won the most Serie A titles?",
         answers: [{
-                value: "Cagliari",
+                text: "Cagliari",
                 correct: false
             },
             {
-                value: "Napoli",
+                text: "Napoli",
                 correct: false
             },
             {
-                value: "Genoa",
+                text: "Genoa",
                 correct: true
             },
             {
-                value: "Lazio",
+                text: "Lazio",
                 correct: false
             },
         ]
@@ -307,19 +317,19 @@ const questions = [{
     {
         question: "Which outfield player appeared in the Champions League final in three different decades?",
         answers: [{
-                value: "Ryan Giggs",
+                text: "Ryan Giggs",
                 correct: true
             },
             {
-                value: "Paul Scholes",
+                text: "Paul Scholes",
                 correct: false
             },
             {
-                value: "Wayne Rooney",
+                text: "Wayne Rooney",
                 correct: false
             },
             {
-                value: "Roy Keane",
+                text: "Roy Keane",
                 correct: false
             },
         ]
