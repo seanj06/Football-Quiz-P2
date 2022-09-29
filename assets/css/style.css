@@ -46,11 +46,11 @@ body {
 }
 
 #question {
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-family: 'Oswald', sans-serif;
 }
 
-.button-group > button {
+.ans-btns {
     width: 80vw;
     height: 7vh;
     margin-top: 15px;

@@ -52,11 +52,37 @@ function startGame() {
 
 
 function setNextQuestion() {
+    resetState();
     showQuestion(shuffleQuestions[currentQuestion])
 }
 
+/**
+ *  Takes question from array of questions to display, creates a button for each answer
+ * and sets dataset for each correct answer
+ */
 function showQuestion(question) {
     questionElement.innerText = question.question;
+    question.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('ans-btns');
+        if(answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener('click', selectAnswer);
+        answerButtons.appendChild(button);
+    })
+}
+
+function selectAnswer() {
+
+}
+
+ function resetState() {
+    nextButton.classList.add('hide');
+    while(answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
 }
 
 
