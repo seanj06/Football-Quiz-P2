@@ -17,6 +17,7 @@ const scoreText = document.getElementById('score');
 let shuffleQuestions;
 let currentQuestion;
 let shuffleAnswers;
+// Variables needed to keep score
 let currentScore = 0;
 let correctAnswer = 0;
 
@@ -27,6 +28,7 @@ nextButton.addEventListener('click', () => {
     currentQuestion++;
     setNextQuestion();
 })
+restartButton.addEventListener('click', restartGame);
 
 
 /**
@@ -117,6 +119,19 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
+}
+
+function restartGame() {
+    currentQuestion = 0;
+    currentScore = 0;
+    startButton.classList.remove('hide');
+    userName.classList.remove('hide');
+    nameLabel.classList.remove('hide');
+    nextButton.classList.add('hide');
+    questionElement.classList.add('hide');
+    answerButtons.classList.add('hide');
+    restartButton.classList.add('hide');
+    scoreText.classList.add('hide');
 }
 
 /**
