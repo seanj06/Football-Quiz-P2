@@ -44,7 +44,7 @@ function startGame() {
         currentQuestion = 0;
         currentScore = 0;
         setNextQuestion();
-        
+
     } else {
         alert("Please enter a valid username with 3 characters or more.")
     }
@@ -66,7 +66,7 @@ function showQuestion(question) {
         const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('ans-btns');
-        if(answer.correct) {
+        if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
         button.addEventListener('click', selectAnswer);
@@ -74,13 +74,35 @@ function showQuestion(question) {
     })
 }
 
-function selectAnswer() {
-
+function selectAnswer(e) {
+    const selectedAnswer = e.target;
+    const correct = selectedAnswer.dataset.correct;
+    setStatusClass(document.body, correct);
+    Array.from(answerButtons.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
 }
 
- function resetState() {
+function setStatusClass(element, correct) {
+    clearStatusClass(element);
+    if (correct) {
+        element.classList.add('correct');
+    } else {
+        element.classList.add('wrong');
+    }
+}
+
+function clearStatusClass(element) {
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
+}
+
+/**
+ * Removes next button until answer is clicked and removes previous answers from page
+ */
+function resetState() {
     nextButton.classList.add('hide');
-    while(answerButtons.firstChild) {
+    while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }

@@ -105,3 +105,11 @@ input[type=text] {
     height: 3vh;
     font-size: 1.5rem;
 }
+
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
