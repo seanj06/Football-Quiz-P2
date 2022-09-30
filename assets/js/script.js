@@ -21,8 +21,9 @@ let shuffleAnswers;
 let currentScore = 0;
 let correctAnswer = 0;
 // Timer
-timer = document.getElementById('timer');
-
+let timer = document.getElementById('timer');
+let currentTime = 100;
+let currentTimer = setInterval(timeLeft, 1000);
 // Runs startGame function when start button is clicked
 
 startButton.addEventListener('click', startGame);
@@ -86,12 +87,12 @@ function showQuestion(question) {
     })
 }
 
- /**
-  * Checks that the users clicked answer has the dataset of correct and if it is increments current score by 1
-  * Checks that there is still questions to be displayed and if not gives the user a total score with a message 
-  * and shows the restartbutton.
-  */
- 
+/**
+ * Checks that the users clicked answer has the dataset of correct and if it is increments current score by 1
+ * Checks that there is still questions to be displayed and if not gives the user a total score with a message 
+ * and shows the restartbutton.
+ */
+
 function selectAnswer(e) {
     const selectedAnswer = e.target;
     const correct = selectedAnswer.dataset.correct;
@@ -164,17 +165,20 @@ function resetState() {
 }
 
 
-let currentTime = 15;
+/**
+ * Timer function, displays current timer, displays user message if time runs out and restarts game
+ */
 function timeLeft() {
     currentTime--
-    timer.innerText = `Time Left:${currentTime}`;
-
-    if(currentTime === 0) {
+    timer.innerText = `Time Left:${currentTime}s`;
+    if (currentTime === 0) {
         clearInterval(currentTimer);
+        alert('Game over, you ran out of time');
+        restartGame();
     }
 }
 
-let currentTimer = setInterval(timeLeft, 1000);
+
 
 
 // Quiz questions
