@@ -113,3 +113,10 @@ input[type=text] {
 .wrong {
     background-color: red;
 }
+
+#timer{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 15px;
+}

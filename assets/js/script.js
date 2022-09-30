@@ -20,6 +20,8 @@ let shuffleAnswers;
 // Variables needed to keep score
 let currentScore = 0;
 let correctAnswer = 0;
+// Timer
+timer = document.getElementById('timer');
 
 // Runs startGame function when start button is clicked
 
@@ -160,6 +162,19 @@ function resetState() {
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
+
+
+let currentTime = 15;
+function timeLeft() {
+    currentTime--
+    timer.innerText = `Time Left:${currentTime}`;
+
+    if(currentTime === 0) {
+        clearInterval(currentTimer);
+    }
+}
+
+let currentTimer = setInterval(timeLeft, 1000);
 
 
 // Quiz questions
