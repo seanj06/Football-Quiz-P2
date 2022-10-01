@@ -4,6 +4,7 @@
 const startButton = document.getElementById('start-btn');
 const restartButton = document.getElementById('restart-btn');
 const nextButton = document.getElementById('next-btn');
+const instructionButton = document.getElementById('instruction-btn');
 // Input Field
 const userNameText = document.getElementById('username').value;
 const userName = document.getElementById('username');
@@ -13,6 +14,7 @@ const nameLabel = document.getElementById('name-label');
 const questionElement = document.getElementById('question');
 const answerButtons = document.getElementById('answer-buttons');
 const scoreText = document.getElementById('score');
+const instructionContainer = document.getElementById('instruction-container')
 // Variables needed to display questions
 let shuffleQuestions;
 let currentQuestion;
@@ -23,16 +25,17 @@ let correctAnswer = 0;
 // Timer
 let timer = document.getElementById('timer');
 let currentTime = 100;
-let currentTimer = setInterval(timeLeft, 1000);
+//let currentTimer = setInterval(timeLeft, 1000);
 
-// Runs startGame function when start button is clicked
+// Button event listeners
 
-startButton.addEventListener('click', startGame, timeLeft);
+startButton.addEventListener('click', startGame,);
 nextButton.addEventListener('click', () => {
     currentQuestion++;
     setNextQuestion();
 })
 restartButton.addEventListener('click', restartGame);
+instructionButton.addEventListener('click', showInstructions);
 
 
 /**
@@ -162,6 +165,12 @@ function resetState() {
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
+}
+
+function showInstructions() {
+   instructionContainer.classList.remove('hide');
+   instructionContainer.classList.add('ins-container');
+   instructionButton.classList.add('hide');
 }
 
 
