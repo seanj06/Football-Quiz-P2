@@ -31,7 +31,7 @@ let currentTime = 100;
 
 // Button event listeners
 
-startButton.addEventListener('click', startGame,);
+startButton.addEventListener('click', startGame, usernameInvalid);
 
 nextButton.addEventListener('click', () => {
     currentQuestion++;
@@ -67,8 +67,7 @@ function startGame() {
         currentScore = 0;
         setNextQuestion();
     } else {
-        usernameInvalid();
-       // alert("Please enter a valid username with 3 characters or more.")
+       usernameInvalid();
     }
 }
 
@@ -180,9 +179,10 @@ function resetState() {
  * Shows instruction container
  */
 function showInstructions() {
-   instructionContainer.classList.remove('hide');
-   instructionContainer.classList.add('ins-container');
-   instructionButton.classList.add('hide');
+    instructionContainer.classList.remove('hide');
+    instructionContainer.classList.add('ins-container');
+    instructionButton.classList.add('hide');
+    instructionText.innerText = "You have 100 seconds to answer 10 questions. Good luck!";
 }
 
 /**
@@ -195,9 +195,9 @@ function hideInstructions() {
 }
 
 function usernameInvalid() {
-   instructionContainer.classList.remove('hide');
-   instructionContainer.classList.add('ins-container');
-   instructionText.innerText = "Please enter a valid username of 3 characters or more";
+    instructionContainer.classList.remove('hide');
+    instructionContainer.classList.add('ins-container');
+    instructionText.innerText = "Please enter a valid username of 3 characters or more";
 }
 
 /**
