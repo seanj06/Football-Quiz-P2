@@ -120,7 +120,7 @@ input[type=text] {
     margin-top: 15px;
 }
 
-.ins-container {
+.alert-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -133,7 +133,7 @@ input[type=text] {
     background-color: cadetblue;
 } 
 
-.instruction-text {
+.alertbox-text {
     text-align: center;
     font-size: 1rem;
 }

@@ -15,8 +15,8 @@ const nameLabel = document.getElementById('name-label');
 const questionElement = document.getElementById('question');
 const answerButtons = document.getElementById('answer-buttons');
 const scoreText = document.getElementById('score');
-const instructionContainer = document.getElementById('instruction-container')
-const instructionText = document.getElementById('ins-text');
+const alertContainer = document.getElementById('alert-container')
+const alertText = document.getElementById('alert-text');
 // Variables needed to display questions
 let shuffleQuestions;
 let currentQuestion;
@@ -179,25 +179,25 @@ function resetState() {
  * Shows instruction container
  */
 function showInstructions() {
-    instructionContainer.classList.remove('hide');
-    instructionContainer.classList.add('ins-container');
+    alertContainer.classList.remove('hide');
+    alertContainer.classList.add('alert-container');
     instructionButton.classList.add('hide');
-    instructionText.innerText = "You have 100 seconds to answer 10 questions. Good luck!";
+    alertText.innerText = "You have 100 seconds to answer 10 questions. Good luck!";
 }
 
 /**
  * Hides instruction container
  */
 function hideInstructions() {
-    instructionContainer.classList.add('hide');
-    instructionContainer.classList.remove('ins-container');
+    alertContainer.classList.add('hide');
+    alertContainer.classList.remove('alert-container');
     instructionButton.classList.remove('hide');
 }
 
 function usernameInvalid() {
-    instructionContainer.classList.remove('hide');
-    instructionContainer.classList.add('ins-container');
-    instructionText.innerText = "Please enter a valid username of 3 characters or more";
+    alertContainer.classList.remove('hide');
+    alertContainer.classList.add('alert-container');
+    alertText.innerText = "Please enter a valid username of 3 characters or more";
 }
 
 /**
