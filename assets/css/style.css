@@ -122,6 +122,8 @@ input[type=text] {
 
 .ins-container {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     height: 30vh;
     width: 35vh;
     margin-top: 20px;

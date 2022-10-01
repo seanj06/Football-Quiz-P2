@@ -16,6 +16,7 @@ const questionElement = document.getElementById('question');
 const answerButtons = document.getElementById('answer-buttons');
 const scoreText = document.getElementById('score');
 const instructionContainer = document.getElementById('instruction-container')
+const instructionText = document.getElementById('ins-text');
 // Variables needed to display questions
 let shuffleQuestions;
 let currentQuestion;
@@ -66,7 +67,8 @@ function startGame() {
         currentScore = 0;
         setNextQuestion();
     } else {
-        alert("Please enter a valid username with 3 characters or more.")
+        usernameInvalid();
+       // alert("Please enter a valid username with 3 characters or more.")
     }
 }
 
@@ -174,18 +176,29 @@ function resetState() {
     }
 }
 
+/**
+ * Shows instruction container
+ */
 function showInstructions() {
    instructionContainer.classList.remove('hide');
    instructionContainer.classList.add('ins-container');
    instructionButton.classList.add('hide');
 }
 
+/**
+ * Hides instruction container
+ */
 function hideInstructions() {
     instructionContainer.classList.add('hide');
     instructionContainer.classList.remove('ins-container');
     instructionButton.classList.remove('hide');
 }
 
+function usernameInvalid() {
+   instructionContainer.classList.remove('hide');
+   instructionContainer.classList.add('ins-container');
+   instructionText.innerText = "Please enter a valid username of 3 characters or more";
+}
 
 /**
  * Timer function, displays current timer, displays user message if time runs out and restarts game
