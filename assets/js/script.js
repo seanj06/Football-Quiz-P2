@@ -24,9 +24,10 @@ let correctAnswer = 0;
 let timer = document.getElementById('timer');
 let currentTime = 100;
 let currentTimer = setInterval(timeLeft, 1000);
+
 // Runs startGame function when start button is clicked
 
-startButton.addEventListener('click', startGame);
+startButton.addEventListener('click', startGame, timeLeft);
 nextButton.addEventListener('click', () => {
     currentQuestion++;
     setNextQuestion();
@@ -54,7 +55,6 @@ function startGame() {
         currentQuestion = 0;
         currentScore = 0;
         setNextQuestion();
-
     } else {
         alert("Please enter a valid username with 3 characters or more.")
     }
