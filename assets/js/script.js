@@ -5,6 +5,7 @@ const startButton = document.getElementById('start-btn');
 const restartButton = document.getElementById('restart-btn');
 const nextButton = document.getElementById('next-btn');
 const instructionButton = document.getElementById('instruction-btn');
+const okButton = document.getElementById('ok-btn');
 // Input Field
 const userNameText = document.getElementById('username').value;
 const userName = document.getElementById('username');
@@ -30,12 +31,17 @@ let currentTime = 100;
 // Button event listeners
 
 startButton.addEventListener('click', startGame,);
+
 nextButton.addEventListener('click', () => {
     currentQuestion++;
     setNextQuestion();
 })
+
 restartButton.addEventListener('click', restartGame);
+
 instructionButton.addEventListener('click', showInstructions);
+
+okButton.addEventListener('click', hideInstructions);
 
 
 /**
@@ -51,6 +57,7 @@ function startGame() {
         nextButton.classList.remove('hide');
         questionElement.classList.remove('hide');
         answerButtons.classList.remove('hide');
+        instructionButton.classList.add('hide');
         // Shuffles the questions to give a random array
         shuffleQuestions = questions.sort(() => Math.random() - .5);
         // Sorts the answers array to match up with the shuffled question
@@ -171,6 +178,12 @@ function showInstructions() {
    instructionContainer.classList.remove('hide');
    instructionContainer.classList.add('ins-container');
    instructionButton.classList.add('hide');
+}
+
+function hideInstructions() {
+    instructionContainer.classList.add('hide');
+    instructionContainer.classList.remove('ins-container');
+    instructionButton.classList.remove('hide');
 }
 
 
