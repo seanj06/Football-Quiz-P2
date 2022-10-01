@@ -168,7 +168,7 @@ function resetState() {
 /**
  * Timer function, displays current timer, displays user message if time runs out and restarts game
  */
-function timeLeft() {
+/*function timeLeft() {
     currentTime--
     timer.innerText = `Time Left:${currentTime}s`;
     if (currentTime === 0) {
@@ -176,7 +176,7 @@ function timeLeft() {
         alert('Game over, you ran out of time');
         restartGame();
     }
-}
+} */
 
 
 

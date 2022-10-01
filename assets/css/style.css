@@ -42,8 +42,6 @@ body {
     padding: 10px;
     border-radius: 10px;
     background-color: azure;
-    position: absolute;
-    
 }
 
 #question {
@@ -67,13 +65,13 @@ body {
 
 .btn {
     margin: 25px;
-    width: 60vw;
+    width: 30vw;
     height: 5vh;
     border-radius: 10px;
     border-radius: 10px;
     background-color: grey;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 #score {
@@ -120,4 +118,20 @@ input[type=text] {
     font-size: 2rem;
     text-align: center;
     margin-top: 15px;
+}
+
+#instruction-container {
+    display: flex;
+    height: 30vh;
+    width: 35vh;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: white;
+    background-color: cadetblue;
+}
+
+.instruction-text {
+    text-align: center;
+    font-size: 1rem;
 }
