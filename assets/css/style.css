@@ -56,6 +56,12 @@ body {
     border-radius: 10px;
 }
 
+.ans-btns:hover {
+   color: white;
+   background-color: dimgray;
+   cursor: pointer;
+}
+
 /* Start and restart buttons */
 
 .control-buttons {
@@ -72,6 +78,12 @@ body {
     background-color: grey;
     color: white;
     font-size: 1.1rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: white;
+    background-color: dimgray;
 }
 
 #score {

@@ -27,7 +27,7 @@ let correctAnswer = 0;
 
 // Button event listeners
 
-startButton.addEventListener('click', startGame, startTimer);
+startButton.addEventListener('click', startGame,);
 
 nextButton.addEventListener('click', () => {
     currentQuestion++;
@@ -63,7 +63,7 @@ function startGame() {
         currentQuestion = 0;
         currentScore = 0;
         setNextQuestion();
-        startTimer();
+       // startTimer();
     } else {
         usernameInvalid();
     }
