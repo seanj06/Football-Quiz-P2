@@ -211,7 +211,7 @@ function startTimer() {
         if(currentTime > 0) {
             var timer = document.getElementById('timer');
             timer.innerText = `Time Left:${currentTime}s`;
-        } else {
+        } if (currentTime === 0) {
             alert('You ran out of time');
             clearInterval(currentTime);
             restartGame();
