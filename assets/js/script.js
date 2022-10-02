@@ -63,7 +63,7 @@ function startGame() {
         currentQuestion = 0;
         currentScore = 0;
         setNextQuestion();
-        startTimer();
+        //startTimer();
     } else {
         usernameInvalid();
     }
