@@ -24,14 +24,10 @@ let shuffleAnswers;
 // Variables needed to keep score
 let currentScore = 0;
 let correctAnswer = 0;
-// Timer
-let timer = document.getElementById('timer');
-let currentTime = 100;
-//let currentTimer = setInterval(timeLeft, 1000);
 
 // Button event listeners
 
-startButton.addEventListener('click', startGame, usernameInvalid);
+startButton.addEventListener('click', startGame, startTimer);
 
 nextButton.addEventListener('click', () => {
     currentQuestion++;
@@ -66,8 +62,9 @@ function startGame() {
         currentQuestion = 0;
         currentScore = 0;
         setNextQuestion();
+        startTimer();
     } else {
-       usernameInvalid();
+        usernameInvalid();
     }
 }
 
@@ -194,24 +191,33 @@ function hideInstructions() {
     instructionButton.classList.remove('hide');
 }
 
+/**
+ * Alert message if username is invalid
+ */
 function usernameInvalid() {
     alertContainer.classList.remove('hide');
     alertContainer.classList.add('alert-container');
     alertText.innerText = "Please enter a valid username of 3 characters or more";
 }
 
+
 /**
  * Timer function, displays current timer, displays user message if time runs out and restarts game
  */
-/*function timeLeft() {
-    currentTime--
-    timer.innerText = `Time Left:${currentTime}s`;
-    if (currentTime === 0) {
-        clearInterval(currentTimer);
-        alert('Game over, you ran out of time');
-        restartGame();
-    }
-} */
+function startTimer() {
+    let currentTime = 100;
+    setInterval(function () {
+        currentTime--;
+        if(currentTime > 0) {
+            var timer = document.getElementById('timer');
+            timer.innerText = `Time Left:${currentTime}s`;
+        } else {
+            alert('You ran out of time');
+            clearInterval(currentTime);
+            restartGame();
+        }
+    }, 1000);
+}
 
 
 
