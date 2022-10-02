@@ -22,8 +22,8 @@ body {
 }
 
 .ball-img {
-    width: 20vh;
-    height: 20vh;
+    width: 15vh;
+    height: 15vh;
     display: block;
     margin: auto;
     border-radius: 50%;

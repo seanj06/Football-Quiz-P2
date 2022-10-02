@@ -27,7 +27,7 @@ let correctAnswer = 0;
 
 // Button event listeners
 
-startButton.addEventListener('click', startGame,);
+startButton.addEventListener('click', startGame, );
 
 nextButton.addEventListener('click', () => {
     currentQuestion++;
@@ -63,7 +63,7 @@ function startGame() {
         currentQuestion = 0;
         currentScore = 0;
         setNextQuestion();
-       // startTimer();
+        startTimer();
     } else {
         usernameInvalid();
     }
@@ -210,10 +210,10 @@ function startTimer() {
     let currentTime = 100;
     setInterval(function () {
         currentTime--;
-        if(currentTime > 0) {
+        if (currentTime > 0) {
             var timer = document.getElementById('timer');
             timer.innerText = `Time Left:${currentTime}s`;
-        }  else if (currentTime === 0) {
+        } else if (currentTime === 0) {
             alert('You ran out of time');
             clearInterval(currentTime);
             restartGame();
