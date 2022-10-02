@@ -55,6 +55,7 @@ function startGame() {
         questionElement.classList.remove('hide');
         answerButtons.classList.remove('hide');
         instructionButton.classList.add('hide');
+        timer.classList.remove('hide');
         // Shuffles the questions to give a random array
         shuffleQuestions = questions.sort(() => Math.random() - .5);
         // Sorts the answers array to match up with the shuffled question
@@ -160,6 +161,7 @@ function restartGame() {
     answerButtons.classList.add('hide');
     restartButton.classList.add('hide');
     scoreText.classList.add('hide');
+    timer.classList.add('hide');
 }
 
 /**
@@ -211,7 +213,7 @@ function startTimer() {
         if(currentTime > 0) {
             var timer = document.getElementById('timer');
             timer.innerText = `Time Left:${currentTime}s`;
-        } if (currentTime === 0) {
+        }  else if (currentTime === 0) {
             alert('You ran out of time');
             clearInterval(currentTime);
             restartGame();
