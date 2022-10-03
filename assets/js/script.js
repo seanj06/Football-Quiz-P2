@@ -45,7 +45,7 @@ okButton.addEventListener('click', hideInstructions);
  * Gets value of input username,checks if it is 3 characters or more and hides all relevant elements to start game
  */
 function startGame() {
-     userNameText = document.getElementById('username').value;
+    userNameText = document.getElementById('username').value;
     if (userNameText.length >= 3) {
         alert(`Welcome to the quiz ${userNameText}`);
         startButton.classList.add('hide');
@@ -117,11 +117,11 @@ function selectAnswer(e) {
         restartButton.classList.remove('hide');
         scoreText.classList.remove('hide');
         if (currentScore < 4) {
-            scoreText.innerText = `Better luck next ${userNameText} time you got ${currentScore} out of ${currentQuestion + 1} correct`
+            scoreText.innerText = `Better luck next time ${userNameText} you got ${currentScore} out of ${currentQuestion + 1} correct`
         } else if (currentScore < 7) {
-            scoreText.innerText = `Not bad you got ${currentScore} out of ${currentQuestion} correct`
+            scoreText.innerText = `Not bad ${userNameText} you got ${currentScore} out of ${currentQuestion} correct`
         } else {
-            scoreText.innerText = `Well done you got ${currentScore} out of ${currentQuestion + 1} questions correct`
+            scoreText.innerText = `Well done ${userNameText} you got ${currentScore} out of ${currentQuestion + 1} questions correct`
         }
     }
 
