@@ -172,3 +172,16 @@ input[type=text] {
     font-size: 1rem;
     margin-top: 5vh;
 }
+
+#go-btn {
+    margin: auto;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 5px;
+}
+
+#go-btn:hover {
+    cursor: pointer;
+    color: white;
+    background-color: dimgray;
+}

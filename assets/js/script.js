@@ -6,7 +6,7 @@ const restartButton = document.getElementById('restart-btn');
 const nextButton = document.getElementById('next-btn');
 const instructionButton = document.getElementById('instruction-btn');
 const okButton = document.getElementById('ok-btn');
-const gotItBtn = document.getElementById('got-it-btn');
+const goBtn = document.getElementById('go-btn');
 // Input Field
 let userNameText = document.getElementById('username').value;
 const userName = document.getElementById('username');
@@ -30,7 +30,7 @@ let correctAnswer = 0;
 
 // Button event listeners
 
-startButton.addEventListener('click', startGame, );
+startButton.addEventListener('click', welcomeMessage);
 
 nextButton.addEventListener('click', () => {
     currentQuestion++;
@@ -43,17 +43,34 @@ instructionButton.addEventListener('click', showInstructions);
 
 okButton.addEventListener('click', hideInstructions);
 
-gotItBtn.addEventListener('click', hideWelcome);
+goBtn.addEventListener('click', startGame);
 
 
 /**
- * Gets value of input username,checks if it is 3 characters or more and hides all relevant elements to start game
+ * Checks if input username is valid if it isn runs welcomeAlert function and if not shows user error message
  */
-function startGame() {
+function welcomeMessage() {
     userNameText = document.getElementById('username').value;
     if (userNameText.length >= 3) {
-        // alert(`Welcome to the quiz ${userNameText}`);
         welcomeAlert();
+    } else {
+        usernameInvalid();
+    }
+}
+
+/**
+ * Shows user welcome message with button to start the game
+ */
+function welcomeAlert() {
+    welcomeContainer.classList.remove('hide');
+    welcomeContainer.classList.add('alert-container');
+    welcomeText.innerText = `Welcome to the quiz ${userNameText}`;
+}
+
+/**
+ * Starts the game when the got it button is clicked after user has entered a valid username
+ */
+function startGame() {
         startButton.classList.add('hide');
         userName.classList.add('hide');
         nameLabel.classList.add('hide');
@@ -69,10 +86,8 @@ function startGame() {
         currentQuestion = 0;
         currentScore = 0;
         setNextQuestion();
+        hideWelcome();
         //startTimer();
-    } else {
-        usernameInvalid();
-    }
 }
 
 /**
@@ -209,12 +224,9 @@ function usernameInvalid() {
     alertText.innerText = "Please enter a valid username of 3 characters or more";
 }
 
-function welcomeAlert() {
-    welcomeContainer.classList.remove('hide');
-    welcomeContainer.classList.add('alert-container');
-    welcomeText.innerText = `Welcome to the quiz ${userNameText}`;
-}
-
+/**
+ * Hides welcome message, runs when game is started
+ */
 function hideWelcome() {
     welcomeContainer.classList.add('hide');
     welcomeContainer.classList.remove('alert-container');
