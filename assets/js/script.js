@@ -6,6 +6,7 @@ const restartButton = document.getElementById('restart-btn');
 const nextButton = document.getElementById('next-btn');
 const instructionButton = document.getElementById('instruction-btn');
 const okButton = document.getElementById('ok-btn');
+const gotItBtn = dcocument.getElementByd('got-it-btn');
 // Input Field
 let userNameText = document.getElementById('username').value;
 const userName = document.getElementById('username');
@@ -17,6 +18,8 @@ const answerButtons = document.getElementById('answer-buttons');
 const scoreText = document.getElementById('score');
 const alertContainer = document.getElementById('alert-container')
 const alertText = document.getElementById('alert-text');
+const welcomeContainer = document.getElementById('welcome-container');
+const welcomeText = document.getElementById('welcome-text');
 // Variables needed to display questions
 let shuffleQuestions;
 let currentQuestion;
@@ -27,7 +30,7 @@ let correctAnswer = 0;
 
 // Button event listeners
 
-startButton.addEventListener('click', startGame, );
+startButton.addEventListener('click', startGame,);
 
 nextButton.addEventListener('click', () => {
     currentQuestion++;
@@ -47,7 +50,8 @@ okButton.addEventListener('click', hideInstructions);
 function startGame() {
     userNameText = document.getElementById('username').value;
     if (userNameText.length >= 3) {
-        alert(`Welcome to the quiz ${userNameText}`);
+       // alert(`Welcome to the quiz ${userNameText}`);
+        welcomeAlert();
         startButton.classList.add('hide');
         userName.classList.add('hide');
         nameLabel.classList.add('hide');
@@ -200,6 +204,10 @@ function usernameInvalid() {
     alertContainer.classList.remove('hide');
     alertContainer.classList.add('alert-container');
     alertText.innerText = "Please enter a valid username of 3 characters or more";
+}
+
+function welcomeAlert() {
+   
 }
 
 

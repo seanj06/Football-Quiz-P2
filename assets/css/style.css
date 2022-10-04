@@ -57,8 +57,7 @@ body {
 }
 
 .ans-btns:hover {
-   color: white;
-   background-color: dimgray;
+   border: 5px solid green;
    cursor: pointer;
 }
 
@@ -128,12 +127,16 @@ input[type=text] {
     background-color: red;
 }
 
+/* Timer styles */
+
 #timer{
     color: white;
     font-size: 2rem;
     text-align: center;
     margin-top: 15px;
 }
+
+/* Alert box styles */
 
 .alert-container {
     display: flex;
