@@ -6,7 +6,7 @@ const restartButton = document.getElementById('restart-btn');
 const nextButton = document.getElementById('next-btn');
 const instructionButton = document.getElementById('instruction-btn');
 const okButton = document.getElementById('ok-btn');
-const gotItBtn = dcocument.getElementByd('got-it-btn');
+const gotItBtn = document.getElementById('got-it-btn');
 // Input Field
 let userNameText = document.getElementById('username').value;
 const userName = document.getElementById('username');
@@ -30,7 +30,7 @@ let correctAnswer = 0;
 
 // Button event listeners
 
-startButton.addEventListener('click', startGame,);
+startButton.addEventListener('click', startGame, );
 
 nextButton.addEventListener('click', () => {
     currentQuestion++;
@@ -43,6 +43,8 @@ instructionButton.addEventListener('click', showInstructions);
 
 okButton.addEventListener('click', hideInstructions);
 
+gotItBtn.addEventListener('click', hideWelcome);
+
 
 /**
  * Gets value of input username,checks if it is 3 characters or more and hides all relevant elements to start game
@@ -50,7 +52,7 @@ okButton.addEventListener('click', hideInstructions);
 function startGame() {
     userNameText = document.getElementById('username').value;
     if (userNameText.length >= 3) {
-       // alert(`Welcome to the quiz ${userNameText}`);
+        // alert(`Welcome to the quiz ${userNameText}`);
         welcomeAlert();
         startButton.classList.add('hide');
         userName.classList.add('hide');
@@ -166,6 +168,7 @@ function restartGame() {
     restartButton.classList.add('hide');
     scoreText.classList.add('hide');
     timer.classList.add('hide');
+    instructionButton.classList.remove('hide');
 }
 
 /**
@@ -207,7 +210,14 @@ function usernameInvalid() {
 }
 
 function welcomeAlert() {
-   
+    welcomeContainer.classList.remove('hide');
+    welcomeContainer.classList.add('alert-container');
+    welcomeText.innerText = `Welcome to the quiz ${userNameText}`;
+}
+
+function hideWelcome() {
+    welcomeContainer.classList.add('hide');
+    welcomeContainer.classList.remove('alert-container');
 }
 
 
