@@ -62,6 +62,8 @@ function welcomeMessage() {
  * Shows user welcome message with button to start the game
  */
 function welcomeAlert() {
+    username.classList.add('hide');
+    nameLabel.classList.add('hide');
     welcomeContainer.classList.remove('hide');
     welcomeContainer.classList.add('alert-container');
     welcomeText.innerText = `Welcome to the quiz ${userNameText}`;
