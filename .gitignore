@@ -11,3 +11,7 @@ cloudinary_python.txt
 instruction text bug
 
 timer bug let change to var
+
+timer running 2 functions at once bug
+
+username still being able to type after pressing start

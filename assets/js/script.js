@@ -47,11 +47,11 @@ goBtn.addEventListener('click', startGame);
 
 
 /**
- * Checks if input username is valid if it isn runs welcomeAlert function and if not shows user error message
+ * Checks if input username is valid if it isnt runs welcomeAlert function and if not shows user error message
  */
 function welcomeMessage() {
     userNameText = document.getElementById('username').value;
-    if (userNameText.length >= 3) {
+    if (userNameText.length >= 3 && userNameText.length < 10) {
         welcomeAlert();
     } else {
         usernameInvalid();
@@ -71,23 +71,23 @@ function welcomeAlert() {
  * Starts the game when the got it button is clicked after user has entered a valid username
  */
 function startGame() {
-        startButton.classList.add('hide');
-        userName.classList.add('hide');
-        nameLabel.classList.add('hide');
-        nextButton.classList.remove('hide');
-        questionElement.classList.remove('hide');
-        answerButtons.classList.remove('hide');
-        instructionButton.classList.add('hide');
-        timer.classList.remove('hide');
-        // Shuffles the questions to give a random array
-        shuffleQuestions = questions.sort(() => Math.random() - .5);
-        // Sorts the answers array to match up with the shuffled question
-        shuffleAnswers = shuffleQuestions[0].answers.sort(() => Math.random() - .5);
-        currentQuestion = 0;
-        currentScore = 0;
-        setNextQuestion();
-        hideWelcome();
-        //startTimer();
+    startButton.classList.add('hide');
+    userName.classList.add('hide');
+    nameLabel.classList.add('hide');
+    nextButton.classList.remove('hide');
+    questionElement.classList.remove('hide');
+    answerButtons.classList.remove('hide');
+    instructionButton.classList.add('hide');
+    timer.classList.remove('hide');
+    // Shuffles the questions to give a random array
+    shuffleQuestions = questions.sort(() => Math.random() - .5);
+    // Sorts the answers array to match up with the shuffled question
+    shuffleAnswers = shuffleQuestions[0].answers.sort(() => Math.random() - .5);
+    currentQuestion = 0;
+    currentScore = 0;
+    setNextQuestion();
+    hideWelcome();
+    startTimer();
 }
 
 /**
@@ -221,7 +221,7 @@ function hideInstructions() {
 function usernameInvalid() {
     alertContainer.classList.remove('hide');
     alertContainer.classList.add('alert-container');
-    alertText.innerText = "Please enter a valid username of 3 characters or more";
+    alertText.innerText = "Please enter a valid username of between 3 and 9 characters";
 }
 
 /**
@@ -244,14 +244,12 @@ function startTimer() {
             var timer = document.getElementById('timer');
             timer.innerText = `Time Left:${currentTime}s`;
         } else if (currentTime === 0) {
-            alert('You ran out of time');
+            alert(`Sorry ${userNameText} you ran out of time`);
             clearInterval(currentTime);
             restartGame();
         }
     }, 1000);
 }
-
-
 
 
 // Quiz questions
