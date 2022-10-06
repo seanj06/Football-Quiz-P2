@@ -89,7 +89,7 @@ function startGame() {
     currentScore = 0;
     setNextQuestion();
     hideWelcome();
-    startTimer();
+    //startTimer();
 }
 
 /**
@@ -186,6 +186,7 @@ function restartGame() {
     scoreText.classList.add('hide');
     timer.classList.add('hide');
     instructionButton.classList.remove('hide');
+    userName.value = '';
 }
 
 /**
@@ -239,7 +240,7 @@ function hideWelcome() {
  * Timer function, displays current timer, displays user message if time runs out and restarts game
  */
 function startTimer() {
-    let currentTime = 100;
+    var currentTime = 100;
     setInterval(function () {
         currentTime--;
         if (currentTime > 0) {
@@ -249,9 +250,13 @@ function startTimer() {
             alert(`Sorry ${userNameText} you ran out of time`);
             clearInterval(currentTime);
             restartGame();
+        } else if (currentQuestion === 0) {
+            clearInterval(currentTime);
         }
     }, 1000);
 }
+
+
 
 
 // Quiz questions
