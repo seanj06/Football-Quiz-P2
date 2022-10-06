@@ -28,6 +28,9 @@ let shuffleAnswers;
 let currentScore = 0;
 let correctAnswer = 0;
 const totalQuestions = 9;
+// Timer variables
+let timer = document.getElementById('timer');
+let gameTimer;
 
 // Button event listeners
 
@@ -242,28 +245,29 @@ function hideWelcome() {
     welcomeContainer.classList.remove('alert-container');
 }
 
-
 /**
  * Timer function, displays current timer, displays user message if time runs out and restarts game
  */
 function startTimer() {
     let currentTime = 100;
-    setInterval(function () {
+    gameTimer = setInterval(function () {
         currentTime--;
-        let timer = document.getElementById('timer');
         if (currentTime > 0) {
             timer.innerText = `Time Left:${currentTime}s`;
         } else if (currentTime === 0) {
             alert(`Sorry ${userNameText} you ran out of time`);
-            clearInterval(currentTime);
             restartGame();
-        } else if (currentQuestion == 0) {
-            currentTime = 0;
+            stopTimer();
         }
     }, 1000);
 }
 
-
+/**
+ * Resets Timer when it hits zero
+ */
+function stopTimer() {
+    clearInterval(gameTimer);
+}
 
 
 // Quiz questions
@@ -288,201 +292,201 @@ const questions = [{
             }
         ]
     },
-    {
-        question: "The fastest goal scored in Premier League history came in 7.69 seconds. Who scored it?",
-        answers: [{
-                text: "Mohamed Salah",
-                correct: false
-            },
-            {
-                text: "Didier Drogba",
-                correct: false
-            },
-            {
-                text: "Shane Long",
-                correct: true
-            },
-            {
-                text: "Troy Deeney",
-                correct: false
-            },
-        ]
-    },
-    {
-        question: "Which country won the first ever World Cup in 1930?",
-        answers: [{
-                text: "Brazil",
-                correct: false
-            },
-            {
-                text: "Spain",
-                correct: false
-            },
-            {
-                text: "Uruguay",
-                correct: true
-            },
-            {
-                text: "Mexico",
-                correct: false
-            },
-        ]
+    // {
+    //    question: "The fastest goal scored in Premier League history came in 7.69 seconds. Who scored it?",
+    //     answers: [{
+    //             text: "Mohamed Salah",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Didier Drogba",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Shane Long",
+    //             correct: true
+    //         },
+    //         {
+    //             text: "Troy Deeney",
+    //             correct: false
+    //         },
+    //     ]
+    // },
+    // {
+    //     question: "Which country won the first ever World Cup in 1930?",
+    //     answers: [{
+    //             text: "Brazil",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Spain",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Uruguay",
+    //             correct: true
+    //         },
+    //         {
+    //             text: "Mexico",
+    //             correct: false
+    //         },
+    //     ]
 
-    },
+    // },
 
-    {
-        question: "The record number of World Cup goals is 16, scored by who?",
-        answers: [{
-                text: "Miraslav Klose",
-                correct: true
-            },
-            {
-                text: "Pele",
-                correct: false
-            },
-            {
-                text: "Thomas Muller",
-                correct: false
-            },
-            {
-                text: "Lionel Messi",
-                correct: false
-            },
-        ]
+    // {
+    //     question: "The record number of World Cup goals is 16, scored by who?",
+    //     answers: [{
+    //             text: "Miraslav Klose",
+    //             correct: true
+    //         },
+    //         {
+    //             text: "Pele",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Thomas Muller",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Lionel Messi",
+    //             correct: false
+    //         },
+    //     ]
 
-    },
+    // },
 
-    {
-        question: "Which Spanish club's nickname is Los Colchoneros, which translates to English as 'The Mattress Makers'?",
-        answers: [{
-                text: "Espanyol",
-                correct: false
-            },
-            {
-                text: "Real Vallodid",
-                correct: false
-            },
-            {
-                text: "Valencia",
-                correct: false
-            },
-            {
-                text: "Athletico Madrid",
-                correct: true
-            },
-        ]
+    // {
+    //     question: "Which Spanish club's nickname is Los Colchoneros, which translates to English as 'The Mattress Makers'?",
+    //     answers: [{
+    //             text: "Espanyol",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Real Vallodid",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Valencia",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Athletico Madrid",
+    //             correct: true
+    //         },
+    //     ]
 
-    },
+    // },
 
-    {
-        question: "Messi has spent his entire professional career at Barcelona, but what was his schoolboy team?",
-        answers: [{
-                text: "Newells Old Boys",
-                correct: true
-            },
-            {
-                text: "River Plate",
-                correct: false
-            },
-            {
-                text: "Boca Juniors",
-                correct: false
-            },
-            {
-                text: "Chacarita Juniors",
-                correct: false
-            },
-        ]
+    // {
+    //     question: "Messi has spent his entire professional career at Barcelona, but what was his schoolboy team?",
+    //     answers: [{
+    //             text: "Newells Old Boys",
+    //             correct: true
+    //         },
+    //         {
+    //             text: "River Plate",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Boca Juniors",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Chacarita Juniors",
+    //             correct: false
+    //         },
+    //     ]
 
-    },
+    // },
 
-    {
-        question: "Who is the only player to win the Champions League with three different clubs?",
-        answers: [{
-                text: "Clarence Seedorf",
-                correct: true
-            },
-            {
-                text: "Zlatan Ibrahimovic",
-                correct: false
-            },
-            {
-                text: "Kaka",
-                correct: false
-            },
-            {
-                text: "Luis Figo",
-                correct: false
-            },
-        ]
+    // {
+    //     question: "Who is the only player to win the Champions League with three different clubs?",
+    //     answers: [{
+    //             text: "Clarence Seedorf",
+    //             correct: true
+    //         },
+    //         {
+    //             text: "Zlatan Ibrahimovic",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Kaka",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Luis Figo",
+    //             correct: false
+    //         },
+    //     ]
 
-    },
+    // },
 
-    {
-        question: "Which team was the first from the UK to win the European Cup?",
-        answers: [{
-                text: "Manchester United",
-                correct: false
-            },
-            {
-                text: "Celtic",
-                correct: true
-            },
-            {
-                text: "Nottingham Forrest",
-                correct: false
-            },
-            {
-                text: "Liverpool",
-                correct: false
-            },
-        ]
+    // {
+    //     question: "Which team was the first from the UK to win the European Cup?",
+    //     answers: [{
+    //             text: "Manchester United",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Celtic",
+    //             correct: true
+    //         },
+    //         {
+    //             text: "Nottingham Forrest",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Liverpool",
+    //             correct: false
+    //         },
+    //     ]
 
-    },
+    // },
 
-    {
-        question: "After Juventus, AC Milan and Inter, which team has won the most Serie A titles?",
-        answers: [{
-                text: "Cagliari",
-                correct: false
-            },
-            {
-                text: "Napoli",
-                correct: false
-            },
-            {
-                text: "Genoa",
-                correct: true
-            },
-            {
-                text: "Lazio",
-                correct: false
-            },
-        ]
+    // {
+    //     question: "After Juventus, AC Milan and Inter, which team has won the most Serie A titles?",
+    //     answers: [{
+    //             text: "Cagliari",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Napoli",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Genoa",
+    //             correct: true
+    //         },
+    //         {
+    //             text: "Lazio",
+    //             correct: false
+    //         },
+    //     ]
 
-    },
+    // },
 
-    {
-        question: "Which outfield player appeared in the Champions League final in three different decades?",
-        answers: [{
-                text: "Ryan Giggs",
-                correct: true
-            },
-            {
-                text: "Paul Scholes",
-                correct: false
-            },
-            {
-                text: "Wayne Rooney",
-                correct: false
-            },
-            {
-                text: "Roy Keane",
-                correct: false
-            },
-        ]
+    // {
+    //     question: "Which outfield player appeared in the Champions League final in three different decades?",
+    //     answers: [{
+    //             text: "Ryan Giggs",
+    //             correct: true
+    //         },
+    //         {
+    //             text: "Paul Scholes",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Wayne Rooney",
+    //             correct: false
+    //         },
+    //         {
+    //             text: "Roy Keane",
+    //             correct: false
+    //         },
+    //     ]
 
-    },
+    // },
 
 
 ]
