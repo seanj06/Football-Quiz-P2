@@ -27,6 +27,7 @@ let shuffleAnswers;
 // Variables needed to keep score
 let currentScore = 0;
 let correctAnswer = 0;
+const totalQuestions = 9;
 
 // Button event listeners
 
@@ -89,7 +90,7 @@ function startGame() {
     currentScore = 0;
     setNextQuestion();
     hideWelcome();
-    //startTimer();
+    startTimer();
 }
 
 /**
@@ -142,7 +143,7 @@ function selectAnswer(e) {
         if (currentScore < 4) {
             scoreText.innerText = `Better luck next time ${userNameText} you got ${currentScore} out of ${currentQuestion + 1} correct`
         } else if (currentScore < 7) {
-            scoreText.innerText = `Not bad ${userNameText} you got ${currentScore} out of ${currentQuestion} correct`
+            scoreText.innerText = `Not bad ${userNameText} you got ${currentScore} out of ${currentQuestion + 1} correct`
         } else {
             scoreText.innerText = `Well done ${userNameText} you got ${currentScore} out of ${currentQuestion + 1} questions correct`
         }
@@ -206,6 +207,8 @@ function showInstructions() {
     alertContainer.classList.remove('hide');
     alertContainer.classList.add('alert-container');
     instructionButton.classList.add('hide');
+    username.classList.add('hide');
+    nameLabel.classList.add('hide');
     alertText.innerText = "You have 100 seconds to answer 10 questions. Good luck!";
 }
 
@@ -216,6 +219,8 @@ function hideInstructions() {
     alertContainer.classList.add('hide');
     alertContainer.classList.remove('alert-container');
     instructionButton.classList.remove('hide');
+    username.classList.remove('hide');
+    nameLabel.classList.remove('hide');
 }
 
 /**
@@ -225,6 +230,8 @@ function usernameInvalid() {
     alertContainer.classList.remove('hide');
     alertContainer.classList.add('alert-container');
     alertText.innerText = "Please enter a valid username of between 3 and 9 characters";
+    username.classList.add('hide');
+    nameLabel.classList.add('hide');
 }
 
 /**
@@ -240,18 +247,18 @@ function hideWelcome() {
  * Timer function, displays current timer, displays user message if time runs out and restarts game
  */
 function startTimer() {
-    var currentTime = 100;
+    let currentTime = 100;
     setInterval(function () {
         currentTime--;
+        let timer = document.getElementById('timer');
         if (currentTime > 0) {
-            var timer = document.getElementById('timer');
             timer.innerText = `Time Left:${currentTime}s`;
         } else if (currentTime === 0) {
             alert(`Sorry ${userNameText} you ran out of time`);
             clearInterval(currentTime);
             restartGame();
-        } else if (currentQuestion === 0) {
-            clearInterval(currentTime);
+        } else if (currentQuestion == 0) {
+            currentTime = 0;
         }
     }, 1000);
 }
