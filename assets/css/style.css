@@ -188,18 +188,11 @@ input[type=text] {
 
 /* Stats section */
 
-#stats {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 #stats-header {
     color: white;
 }
 
-#stats-text {
+.stats-text {
     text-align: center;
     color: white;
 }
