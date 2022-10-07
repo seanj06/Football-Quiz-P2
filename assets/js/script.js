@@ -31,6 +31,10 @@ const totalQuestions = 9;
 // Timer variables
 let timer = document.getElementById('timer');
 let gameTimer;
+// Stats section
+const stats = document.getElementById('stats');
+const statHeader = document.getElementById('stats-header');
+const statText = document.getElementById('stats-text');
 
 // Button event listeners
 
@@ -191,6 +195,7 @@ function restartGame() {
     timer.classList.add('hide');
     instructionButton.classList.remove('hide');
     userName.value = '';
+    stopTimer();
 }
 
 /**
@@ -257,7 +262,6 @@ function startTimer() {
         } else if (currentTime === 0) {
             alert(`Sorry ${userNameText} you ran out of time`);
             restartGame();
-            stopTimer();
         }
     }, 1000);
 }
