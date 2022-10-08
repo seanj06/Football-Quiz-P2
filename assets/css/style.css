@@ -147,7 +147,8 @@ input[type=text] {
     justify-content: space-around;
     height: 30vh;
     width: 35vh;
-    margin-top: 20px;
+    max-width:100%;
+    margin-top: 80px;
     border-radius: 5px;
     border: 1px solid black;
     color: white;
@@ -171,6 +172,7 @@ input[type=text] {
     text-align: center;
     font-size: 1rem;
     margin-top: 5vh;
+    padding: 10px;
 }
 
 #go-btn {

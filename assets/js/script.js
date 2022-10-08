@@ -20,6 +20,7 @@ const alertContainer = document.getElementById('alert-container')
 const alertText = document.getElementById('alert-text');
 const welcomeContainer = document.getElementById('welcome-container');
 const welcomeText = document.getElementById('welcome-text');
+const ball = document.getElementById('ball');
 // Variables needed to display questions
 let shuffleQuestions;
 let currentQuestion;
@@ -90,6 +91,7 @@ function startGame() {
     answerButtons.classList.remove('hide');
     instructionButton.classList.add('hide');
     timer.classList.remove('hide');
+    ball.classList.add('hide');
     // Shuffles the questions to give a random array
     shuffleQuestions = questions.sort(() => Math.random() - .5);
     // Sorts the answers array to match up with the shuffled question
