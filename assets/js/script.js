@@ -206,6 +206,7 @@ function restartGame() {
     userName.value = '';
     stopTimer();
     stats.classList.add('hide');
+    ball.classList.remove('hide');
 }
 
 /**
@@ -371,7 +372,7 @@ const questions = [{
     },
 
     {
-        question: "Which Spanish club's nickname is Los Colchoneros, which translates to English as 'The Mattress Makers'?",
+        question: "Which Spanish club's nickname is Los Colchoneros, which translates to 'The Mattress Makers'?",
         answers: [{
                 text: "Espanyol",
                 correct: false
