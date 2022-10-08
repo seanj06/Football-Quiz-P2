@@ -98,7 +98,7 @@ function startGame() {
     currentScore = 0;
     setNextQuestion();
     hideWelcome();
-    startTimer();
+    //startTimer();
     stats.classList.remove('hide');
     statHeader.innerText = `${userNameText}'s current stats:`;
 }
@@ -152,6 +152,8 @@ function selectAnswer(e) {
     } else {
         restartButton.classList.remove('hide');
         scoreText.classList.remove('hide');
+        questionElement.classList.add('hide');
+        answerButtons.classList.add('hide');
         if (currentScore < 4) {
             scoreText.innerText = `Better luck next time ${userNameText} you got ${currentScore} out of ${currentQuestion + 1} correct`
         } else if (currentScore < 7) {
