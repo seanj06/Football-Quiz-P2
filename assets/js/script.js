@@ -118,7 +118,7 @@ function setNextQuestion() {
     resetState();
     showQuestion(shuffleQuestions[currentQuestion])
     qText.innerText = `Current Question:${currentQuestion + 1} out of ${totalQuestions}`;
-
+    aText.innerText = `Correct answers ${currentScore} out of ${currentQuestion}`;
 }
 
 /**
@@ -161,6 +161,8 @@ function selectAnswer(e) {
         scoreText.classList.remove('hide');
         questionElement.classList.add('hide');
         answerButtons.classList.add('hide');
+        timer.classList.add('hide');
+        stats.classList.add('hide');
         if (currentScore < 4) {
             scoreText.innerText = `Better luck next time ${userNameText} you got ${currentScore} out of ${currentQuestion + 1} correct`
         } else if (currentScore < 7) {
@@ -272,7 +274,7 @@ function hideWelcome() {
  * Timer function, displays current timer, displays user message if time runs out and restarts game
  */
 function startTimer() {
-    let currentTime = 10;
+    let currentTime = 100;
     gameTimer = setInterval(function () {
         currentTime--;
         if (currentTime > 0) {
