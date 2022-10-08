@@ -188,6 +188,19 @@ input[type=text] {
     background-color: dimgray;
 }
 
+#play-again-btn {
+    margin: auto;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 5px;
+}
+
+#play-again-btn:hover {
+    cursor: pointer;
+    color: white;
+    background-color: dimgray;
+}
+
 /* Stats section */
 
 #stats-header {

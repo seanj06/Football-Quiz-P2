@@ -7,6 +7,7 @@ const nextButton = document.getElementById('next-btn');
 const instructionButton = document.getElementById('instruction-btn');
 const okButton = document.getElementById('ok-btn');
 const goBtn = document.getElementById('go-btn');
+const playAgainBtn = document.getElementById("play-again-btn");
 // Input Field
 let userNameText = document.getElementById('username').value;
 const userName = document.getElementById('username');
@@ -20,6 +21,8 @@ const alertContainer = document.getElementById('alert-container')
 const alertText = document.getElementById('alert-text');
 const welcomeContainer = document.getElementById('welcome-container');
 const welcomeText = document.getElementById('welcome-text');
+const timeContainer = document.getElementById('time-container');
+const timeText = document.getElementById('time-text');
 const ball = document.getElementById('ball');
 // Variables needed to display questions
 let shuffleQuestions;
@@ -51,9 +54,11 @@ restartButton.addEventListener('click', restartGame);
 
 instructionButton.addEventListener('click', showInstructions);
 
-okButton.addEventListener('click', hideInstructions);
+okButton.addEventListener('click', hideInstructions, restartGame);
 
 goBtn.addEventListener('click', startGame);
+
+playAgainBtn.addEventListener('click', restartGame);
 
 
 /**
@@ -100,7 +105,7 @@ function startGame() {
     currentScore = 0;
     setNextQuestion();
     hideWelcome();
-    //startTimer();
+    startTimer();
     stats.classList.remove('hide');
     statHeader.innerText = `${userNameText}'s current stats:`;
 }
@@ -207,6 +212,8 @@ function restartGame() {
     stopTimer();
     stats.classList.add('hide');
     ball.classList.remove('hide');
+    timeContainer.classList.remove('alert-container');
+    timeContainer.classList.add('hide');
 }
 
 /**
@@ -265,14 +272,17 @@ function hideWelcome() {
  * Timer function, displays current timer, displays user message if time runs out and restarts game
  */
 function startTimer() {
-    let currentTime = 100;
+    let currentTime = 10;
     gameTimer = setInterval(function () {
         currentTime--;
         if (currentTime > 0) {
             timer.innerText = `Time Left:${currentTime}s`;
         } else if (currentTime === 0) {
-            alert(`Sorry ${userNameText} you ran out of time`);
-            restartGame();
+            questionElement.classList.add('hide');
+            answerButtons.classList.add('hide');
+            timeContainer.classList.remove('hide');
+            timeContainer.classList.add('alert-container');
+            timeText.innerText = `Sorry ${userNameText} you ran out of time`;
         }
     }, 1000);
 }
