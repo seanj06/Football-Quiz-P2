@@ -87,8 +87,8 @@ body {
 }
 
 #score {
-    font-size: 1rem;
-    margin-top: 10px;
+    font-size: 2rem;
+    margin-top: 75px;
     text-align: center;
     font-weight: bold;
 }
@@ -203,11 +203,20 @@ input[type=text] {
 
 /* Stats section */
 
+.stats-container {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 0 10px;
+    width: 80vw;
+    height: 15vh;
+    background-color: azure;
+}
+
 #stats-header {
-    color: white;
+    text-align: center;
 }
 
 .stats-text {
     text-align: center;
-    color: white;
 }

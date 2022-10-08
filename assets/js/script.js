@@ -105,7 +105,7 @@ function startGame() {
     currentScore = 0;
     setNextQuestion();
     hideWelcome();
-    startTimer();
+    //startTimer();
     stats.classList.remove('hide');
     statHeader.innerText = `${userNameText}'s current stats:`;
 }
@@ -164,11 +164,14 @@ function selectAnswer(e) {
         timer.classList.add('hide');
         stats.classList.add('hide');
         if (currentScore < 4) {
-            scoreText.innerText = `Better luck next time ${userNameText} you got ${currentScore} out of ${currentQuestion + 1} correct`
+            scoreText.innerText = `Better luck next time ${userNameText} you got ${currentScore} out of
+             ${currentQuestion + 1} questions correct. Press the restart button to play again`;
         } else if (currentScore < 7) {
-            scoreText.innerText = `Not bad ${userNameText} you got ${currentScore} out of ${currentQuestion + 1} correct`
+            scoreText.innerText = `Not bad ${userNameText} you got ${currentScore} out of 
+            ${currentQuestion + 1} questions correct. Press the restart button to play again`;
         } else {
-            scoreText.innerText = `Well done ${userNameText} you got ${currentScore} out of ${currentQuestion + 1} questions correct`
+            scoreText.innerText = `Well done ${userNameText} you got ${currentScore} out of
+             ${currentQuestion + 1} questions correct. Press the restart button to play again`;
         }
     }
 
