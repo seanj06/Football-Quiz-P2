@@ -16,7 +16,6 @@ const nameLabel = document.getElementById('name-label');
 // Quiz Container
 const questionElement = document.getElementById('question');
 const answerButtons = document.getElementById('answer-buttons');
-const scoreText = document.getElementById('score');
 const alertContainer = document.getElementById('alert-container');
 const alertText = document.getElementById('alert-text');
 const welcomeContainer = document.getElementById('welcome-container');
@@ -105,7 +104,7 @@ function startGame() {
     currentScore = 0;
     setNextQuestion();
     hideWelcome();
-    startTimer();
+    // startTimer();
     stats.classList.remove('hide');
     statHeader.innerText = `${userNameText}'s current stats:`;
 }
@@ -158,19 +157,21 @@ function selectAnswer(e) {
         nextButton.classList.remove('hide');
     } else {
         restartButton.classList.remove('hide');
-        scoreText.classList.remove('hide');
         questionElement.classList.add('hide');
         answerButtons.classList.add('hide');
         timer.classList.add('hide');
         stats.classList.add('hide');
+        alertContainer.classList.remove('hide');
+        alertContainer.classList.add('alert-container');
+        okButton.classList.add('hide');
         if (currentScore < 4) {
-            scoreText.innerText = `Better luck next time ${userNameText} you got ${currentScore} out of
+            alertText.innerText = `Better luck next time ${userNameText} you got ${currentScore} out of
              ${currentQuestion + 1} questions correct. Press the restart button to play again`;
         } else if (currentScore < 7) {
-            scoreText.innerText = `Not bad ${userNameText} you got ${currentScore} out of 
+            alertText.innerText = `Not bad ${userNameText} you got ${currentScore} out of 
             ${currentQuestion + 1} questions correct. Press the restart button to play again`;
         } else {
-            scoreText.innerText = `Well done ${userNameText} you got ${currentScore} out of
+            alertText.innerText = `Well done ${userNameText} you got ${currentScore} out of
              ${currentQuestion + 1} questions correct. Press the restart button to play again`;
         }
     }
@@ -210,7 +211,6 @@ function restartGame() {
     questionElement.classList.add('hide');
     answerButtons.classList.add('hide');
     restartButton.classList.add('hide');
-    scoreText.classList.add('hide');
     timer.classList.add('hide');
     instructionButton.classList.remove('hide');
     userName.value = '';
@@ -219,6 +219,9 @@ function restartGame() {
     ball.classList.remove('hide');
     timeContainer.classList.remove('alert-container');
     timeContainer.classList.add('hide');
+    alertContainer.classList.add('hide');
+    alertContainer.classList.remove('alert-container');
+    okButton.classList.remove('hide');
 }
 
 /**
