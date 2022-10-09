@@ -104,7 +104,7 @@ function startGame() {
     currentScore = 0;
     setNextQuestion();
     hideWelcome();
-     startTimer();
+    startTimer();
     stats.classList.remove('hide');
     statHeader.innerText = `${userNameText}'s current stats:`;
 }
@@ -279,7 +279,7 @@ function hideWelcome() {
  * Timer function, displays current timer, displays user message if time runs out and restarts game
  */
 function startTimer() {
-    let currentTime = 10;
+    let currentTime = 100;
     gameTimer = setInterval(function () {
         currentTime--;
         if (currentTime > 0) {
