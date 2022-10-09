@@ -104,7 +104,7 @@ function startGame() {
     currentScore = 0;
     setNextQuestion();
     hideWelcome();
-    // startTimer();
+     startTimer();
     stats.classList.remove('hide');
     statHeader.innerText = `${userNameText}'s current stats:`;
 }
@@ -175,9 +175,8 @@ function selectAnswer(e) {
              ${currentQuestion + 1} questions correct. Press the restart button to play again`;
         }
     }
-
-
 }
+
 /**
  * Shows correct and incorrect answers by color after user click
  */
@@ -290,6 +289,7 @@ function startTimer() {
             answerButtons.classList.add('hide');
             timeContainer.classList.remove('hide');
             timeContainer.classList.add('alert-container');
+            nextButton.classList.add('hide');
             timeText.innerText = `Sorry ${userNameText} you ran out of time`;
         }
     }, 1000);

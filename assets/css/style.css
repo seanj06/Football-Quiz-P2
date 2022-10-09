@@ -12,6 +12,7 @@ body {
     height: 100vh;
     background-image: url(../images/football.pitch.jpeg);
     overflow-x: hidden;
+    font-family: 'Oswald', sans-serif;
 }
 
 /* Header */
@@ -42,7 +43,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     background-color: azure;
-    box-shadow: inset 0 0 15px;
+    box-shadow: inset 0 0 20px;
 }
 
 #question {
@@ -79,7 +80,8 @@ body {
     border: 3px solid steelblue;
     background-color: black;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .btn:hover {
@@ -177,7 +179,7 @@ input[type=text] {
 
 .alertbox-text {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 25px;
 }
 
@@ -223,6 +225,7 @@ input[type=text] {
     width: 80vw;
     height: 15vh;
     background-color: azure;
+    box-shadow: inset 0 0 20px;
 }
 
 #stats-header {
