@@ -17,7 +17,7 @@ const nameLabel = document.getElementById('name-label');
 const questionElement = document.getElementById('question');
 const answerButtons = document.getElementById('answer-buttons');
 const scoreText = document.getElementById('score');
-const alertContainer = document.getElementById('alert-container')
+const alertContainer = document.getElementById('alert-container');
 const alertText = document.getElementById('alert-text');
 const welcomeContainer = document.getElementById('welcome-container');
 const welcomeText = document.getElementById('welcome-text');
@@ -48,7 +48,7 @@ startButton.addEventListener('click', welcomeMessage);
 nextButton.addEventListener('click', () => {
     currentQuestion++;
     setNextQuestion();
-})
+});
 
 restartButton.addEventListener('click', restartGame);
 
@@ -105,7 +105,7 @@ function startGame() {
     currentScore = 0;
     setNextQuestion();
     hideWelcome();
-    //startTimer();
+    startTimer();
     stats.classList.remove('hide');
     statHeader.innerText = `${userNameText}'s current stats:`;
 }
@@ -116,7 +116,7 @@ function startGame() {
  */
 function setNextQuestion() {
     resetState();
-    showQuestion(shuffleQuestions[currentQuestion])
+    showQuestion(shuffleQuestions[currentQuestion]);
     qText.innerText = `Current Question:${currentQuestion + 1} out of ${totalQuestions}`;
     aText.innerText = `Correct answers ${currentScore} out of ${currentQuestion}`;
 }
@@ -136,7 +136,7 @@ function showQuestion(question) {
         }
         button.addEventListener('click', selectAnswer);
         answerButtons.appendChild(button);
-    })
+    });
 }
 
 /**
@@ -152,8 +152,8 @@ function selectAnswer(e) {
         currentScore += 1;
     }
     Array.from(answerButtons.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
+        setStatusClass(button, button.dataset.correct);
+    });
     if (shuffleQuestions.length > currentQuestion + 1) {
         nextButton.classList.remove('hide');
     } else {
@@ -277,7 +277,7 @@ function hideWelcome() {
  * Timer function, displays current timer, displays user message if time runs out and restarts game
  */
 function startTimer() {
-    let currentTime = 100;
+    let currentTime = 10;
     gameTimer = setInterval(function () {
         currentTime--;
         if (currentTime > 0) {
@@ -519,4 +519,4 @@ const questions = [{
     },
 
 
-]
+];
