@@ -164,6 +164,7 @@ function selectAnswer(e) {
         alertContainer.classList.remove('hide');
         alertContainer.classList.add('alert-container');
         okButton.classList.add('hide');
+        stopTimer();
         if (currentScore < 4) {
             alertText.innerText = `Better luck next time ${userNameText} you got ${currentScore} out of
              ${currentQuestion + 1} questions correct. Press the restart button to play again`;
