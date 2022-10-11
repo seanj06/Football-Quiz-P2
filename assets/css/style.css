@@ -294,3 +294,22 @@ input[type=text] {
         height: 9vh;
     }
 }
+
+@media screen and (min-height: 800px) {
+    #name-label {
+        font-size: 2rem;
+        margin-top: 100px;
+    }
+
+    #question {
+        font-size: 1.2rem;
+    }
+
+    .stats-text {
+        font-size:1.2rem;
+    }
+
+    #stats-header {
+        font-size: 2rem;
+    }
+}
