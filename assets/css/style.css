@@ -306,7 +306,7 @@ input[type=text] {
     }
 
     #question {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     .stats-text {
@@ -372,17 +372,60 @@ input[type=text] {
     }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-width: 850px) {
     .quiz-container {
         margin: auto;
+        height: 55vh;
     }
 
     .ball-img {
-        height: 15vh;
+        height: 20vh;
+        width: 15vw;
     }
 
     .btn {
+        height: 7vh;
+    }
+
+    .hero-text {
+        font-size: 3.5rem;
+        margin: 0;
+        padding: 10px;
+    }
+
+    input[type=text] {
+        height: 5vh;
+    }
+
+    #name-label {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    .alert-container {
+        height: 45vh;
+        width: 60vh
+    }
+
+    .stats-container {
+        height: 30vh;
+    }
+
+    #ok-btn {
         height: 8vh;
+        margin-bottom: 10px;
+    }
+
+    #go-btn {
+        height: 7vh;
+    }
+
+    .ans-btns {
+        margin: 1px;
+    }
+
+    #quiz-container {
+        height: 56vh;
     }
 
 
