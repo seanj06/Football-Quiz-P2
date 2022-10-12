@@ -234,7 +234,7 @@ input[type=text] {
     margin-top: 10px;
     padding: 0 10px;
     width: 80vw;
-    height: 18vh;
+    height: 19vh;
     background-color: azure;
     box-shadow: inset 0 0 20px;
 }
@@ -322,7 +322,7 @@ input[type=text] {
     }
 
     .stats-container {
-        height: 15vh;
+        height: 16vh;
     }
 }
 
@@ -344,14 +344,23 @@ input[type=text] {
 
 /* Medium size tablets */
 
-@media screen and (min-height: 1024px) {
+@media screen and (min-height: 1024px) and (min-width: 700px) {
     #quiz-container {
-        height: 32vh;
+        height: 40vh;
+    }
+
+    .hero-text {
+        font-size: 3.5rem;
+    }
+
+    #question {
+        font-size: 2rem;
+        margin: 10px 60px;
     }
 
     .ans-btns {
         height: 5vh;
-        margin-top: 5px;
+        margin-top: 10px;
     }
 
     .btn {
@@ -359,7 +368,7 @@ input[type=text] {
     }
 
     .stats-container {
-        height: 13vh;
+        height: 14vh;
     }
 
     .alertbox-text {
