@@ -53,7 +53,7 @@ restartButton.addEventListener('click', restartGame);
 
 instructionButton.addEventListener('click', showInstructions);
 
-okButton.addEventListener('click', hideInstructions, restartGame);
+okButton.addEventListener('click', hideInstructions);
 
 goBtn.addEventListener('click', startGame);
 
@@ -65,6 +65,7 @@ playAgainBtn.addEventListener('click', restartGame);
  */
 function welcomeMessage() {
     userNameText = document.getElementById('username').value;
+    startButton.classList.add('hide');
     if (userNameText.length >= 3 && userNameText.length < 10) {
         welcomeAlert();
     } else {
@@ -255,6 +256,7 @@ function hideInstructions() {
     instructionButton.classList.remove('hide');
     username.classList.remove('hide');
     nameLabel.classList.remove('hide');
+    startButton.classList.remove('hide');
 }
 
 /**
