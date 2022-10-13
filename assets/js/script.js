@@ -310,7 +310,7 @@ function stopTimer() {
 // Quiz questions
 
 const questions = [{
-        question: "Which player scored the fastest hat-trick in the Premier League?",
+        question: "Which player scored the fastest hat-trick ever in the Premier League?",
         answers: [{
                 text: "Sadio Mane",
                 correct: true
@@ -350,7 +350,7 @@ const questions = [{
         ]
     },
     {
-        question: "Which country won the first ever World Cup in 1930?",
+        question: "Which country won the first ever World Cup held in 1930?",
         answers: [{
                 text: "Brazil",
                 correct: false
@@ -372,7 +372,7 @@ const questions = [{
     },
 
     {
-        question: "The record number of World Cup goals is 16, scored by who?",
+        question: "The record number of World Cup goals is 16 goals in total, scored by who?",
         answers: [{
                 text: "Miraslav Klose",
                 correct: true

@@ -41,7 +41,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    justify-content: space-around;
+    padding: 0 10px;
     border-radius: 10px;
     background-color: azure;
     box-shadow: inset 0 0 20px;
@@ -55,10 +56,22 @@ body {
     animation: fadeIn 2s;
 }
 
+.question-container {
+    height: 20vh;
+    width:50vw;
+    border: 1px solid black;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 
 .ans-btns {
-    width: 80vw;
-    height: 7vh;
+    width: 20vw;
+    height: 5vh;
     margin-top: 10px;
     border-radius: 10px;
     background-color: cadetblue;
@@ -70,7 +83,6 @@ body {
     0% {opacity: 0;}
     100%{opacity: 1;}
 }
-
 
 
 .ans-btns:hover {
@@ -124,7 +136,7 @@ body {
 }
 
 #name-label {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-family: 'Oswald', sans-serif;
     margin-top: 75px;
     border-bottom: 1px solid black
@@ -172,12 +184,13 @@ input[type=text] {
     justify-content: space-around;
     height: 30vh;
     width: 35vh;
-    max-width: 100%;
+    max-width: 90%;
     margin: auto;
-    border-radius: 5px;
-    border: 1px solid black;
+    border-radius: 50px;
+    border: 0.8rem solid black;
     color: white;
     background-color: cadetblue;
+    animation: fadeIn 1.5s;
 }
 
 #ok-btn {
@@ -311,7 +324,7 @@ input[type=text] {
 
 @media screen and (min-height: 800px) {
     #name-label {
-        font-size: 2rem;
+        font-size: 2.2rem;
         margin-top: 100px;
     }
 
@@ -356,7 +369,7 @@ input[type=text] {
 
 @media screen and (min-height: 1024px) and (min-width: 700px) {
     #quiz-container {
-        height: 40vh;
+        height: 50vh;
     }
 
     .hero-text {
@@ -365,12 +378,12 @@ input[type=text] {
 
     #question {
         font-size: 2rem;
-        margin: 10px 60px;
+        margin: 18px 60px;
     }
 
     .ans-btns {
         height: 5vh;
-        margin-top: 10px;
+        margin-top: 17px;
     }
 
     .btn {
