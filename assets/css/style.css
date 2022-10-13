@@ -52,7 +52,9 @@ body {
     font-family: 'Oswald', sans-serif;
     text-align: center;
     margin-top: 0;
+    animation: fadeIn 2s;
 }
+
 
 .ans-btns {
     width: 80vw;
@@ -61,7 +63,15 @@ body {
     border-radius: 10px;
     background-color: cadetblue;
     color: white;
+    animation: fadeIn 2s;
 }
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
 
 .ans-btns:hover {
     border: 8px solid steelblue;
