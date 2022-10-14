@@ -492,5 +492,13 @@ input[type=text] {
     .ans-btns {
         height: 9vh;
     }
+
+    #question {
+        font-size: 1.5rem;
+    }
+
+    .hero-text {
+        font-size: 3.5rem;
+    }
 }
 
