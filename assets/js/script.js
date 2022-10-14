@@ -59,7 +59,6 @@ goBtn.addEventListener('click', startGame);
 
 playAgainBtn.addEventListener('click', restartGame);
 
-
 /**
  * Checks if input username is valid if it isnt runs welcomeAlert function and if not shows user error message
  */
@@ -68,7 +67,7 @@ function welcomeMessage() {
     startButton.classList.add('hide');
     if (userNameText.length >= 3 && userNameText.length < 10) {
         welcomeAlert();
-    } else {
+    } else if(userNameText.replace(/\s/g, "").length <= 0 ) {
         usernameInvalid();
     }
 }
@@ -77,7 +76,7 @@ function welcomeMessage() {
  * Shows user welcome message with button to start the game
  */
 function welcomeAlert() {
-    username.classList.add('hide');
+    userName.classList.add('hide');
     nameLabel.classList.add('hide');
     welcomeContainer.classList.remove('hide');
     welcomeContainer.classList.add('alert-container');
@@ -244,7 +243,7 @@ function showInstructions() {
     alertContainer.classList.remove('hide');
     alertContainer.classList.add('alert-container');
     instructionButton.classList.add('hide');
-    username.classList.add('hide');
+    userName.classList.add('hide');
     nameLabel.classList.add('hide');
     alertText.innerText = "You have 100 seconds to answer 10 questions. Good luck!";
 }
@@ -256,7 +255,7 @@ function hideInstructions() {
     alertContainer.classList.add('hide');
     alertContainer.classList.remove('alert-container');
     instructionButton.classList.remove('hide');
-    username.classList.remove('hide');
+    userName.classList.remove('hide');
     nameLabel.classList.remove('hide');
     startButton.classList.remove('hide');
 }
@@ -268,7 +267,7 @@ function usernameInvalid() {
     alertContainer.classList.remove('hide');
     alertContainer.classList.add('alert-container');
     alertText.innerText = "Please enter a valid username of between 3 and 9 characters";
-    username.classList.add('hide');
+    userName.classList.add('hide');
     nameLabel.classList.add('hide');
 }
 
@@ -306,7 +305,6 @@ function startTimer() {
 function stopTimer() {
     clearInterval(gameTimer);
 }
-
 
 // Quiz questions
 
