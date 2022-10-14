@@ -42,7 +42,6 @@ body {
     flex-direction: column;
     border: 0.3rem solid black;
     align-items: center;
-    justify-content: space-between;
     padding: 0 10px;
     border-radius: 10px;
     background-color: azure;
@@ -53,7 +52,7 @@ body {
     font-size: 1rem;
     font-family: 'Oswald', sans-serif;
     text-align: center;
-    margin-top: 0;
+    margin-bottom: 2rem;
     animation: fadeIn 1s;
     border-bottom: 1px solid black;
 }
@@ -92,7 +91,7 @@ body {
 
 
 .ans-btns:hover {
-    border: 2px solid steelblue;
+    border: 0;
     cursor: pointer;
 }
 
@@ -365,7 +364,6 @@ input[type=text] {
 @media screen and (min-height: 800px) and (max-width: 400px) {
     .ans-btns {
         height: 8vh;
-        border: 0.3rem solid black;
     }
 
     .btn {
@@ -390,7 +388,7 @@ input[type=text] {
 
     #question {
         font-size: 2rem;
-        margin: 18px 60px;
+        margin-bottom: 5rem;
     }
 
     .ans-btns {
@@ -413,6 +411,10 @@ input[type=text] {
     .alert-container {
         height: 24vh;
         width: 32vh;
+    }
+
+    .button-group {
+        margin-bottom: 2rem;
     }
 }
 

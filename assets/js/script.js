@@ -156,6 +156,7 @@ function selectAnswer(e) {
     });
     if (shuffleQuestions.length > currentQuestion + 1) {
         nextButton.classList.remove('hide');
+        answerButtons.style.border = 0;
     } else {
         restartButton.classList.remove('hide');
         questionElement.classList.add('hide');
