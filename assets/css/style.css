@@ -40,8 +40,9 @@ body {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
+    border: 0.3rem solid black;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0 10px;
     border-radius: 10px;
     background-color: azure;
@@ -66,17 +67,20 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 
 .ans-btns {
-    width: 20vw;
+    width: 33vw;
     height: 5vh;
-    margin-top: 10px;
+    font-size: 1rem;
     border-radius: 10px;
+    border: 0.4rem solid black;
     background-color: cadetblue;
     color: white;
-    animation: fadeIn 2s;
+    animation: fadeIn 1s;
+    margin: 0.8rem;
 }
 
 @keyframes fadeIn {
@@ -86,7 +90,7 @@ body {
 
 
 .ans-btns:hover {
-    border: 8px solid steelblue;
+    border: 2px solid steelblue;
     cursor: pointer;
 }
 
@@ -166,7 +170,7 @@ input[type=text] {
 #timer {
     font-size: 1.8rem;
     text-align: center;
-    border: 1px solid black;
+    border: 0.3rem solid black;
     border-radius: 10px;
     background-color: azure;
     box-shadow: inset 0 0 20px;
@@ -187,10 +191,11 @@ input[type=text] {
     max-width: 90%;
     margin: auto;
     border-radius: 50px;
+    padding: 0.5rem;
     border: 0.8rem solid black;
     color: white;
     background-color: cadetblue;
-    animation: fadeIn 1.5s;
+    animation: fadeIn 1s;
 }
 
 #ok-btn {
@@ -252,7 +257,7 @@ input[type=text] {
 /* Stats section */
 
 .stats-container {
-    border: 1px solid black;
+    border: 0.3rem solid black;
     border-radius: 10px;
     margin-top: 10px;
     padding: 0 10px;
@@ -279,10 +284,11 @@ input[type=text] {
 
 /* Extra small phones */
 
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 375px) {
     .alertbox-text {
         font-size: 1rem;
         padding: 10px;
+        width: 60vw;
     }
 
     .hero-text {
@@ -302,7 +308,10 @@ input[type=text] {
     }
 
     .ans-btns {
-        margin-top: 5px;
+        margin-top: 0;
+        font-size: 0.6rem;
+        border: 1px solid black;
+        width: 60vw;
     }
 
     #stats-header {
@@ -354,6 +363,7 @@ input[type=text] {
 @media screen and (min-height: 800px) and (max-width: 400px) {
     .ans-btns {
         height: 6vh;
+        border: 5px solid black;
     }
 
     .btn {
@@ -452,9 +462,9 @@ input[type=text] {
         height: 7vh;
     }
 
-    .ans-btns {
-        margin: 1px;
-    }
+   .ans-btns {
+    height: 8vh;
+   }
 
     #quiz-container {
         height: 56vh;
@@ -462,3 +472,4 @@ input[type=text] {
 
 
 }
+
