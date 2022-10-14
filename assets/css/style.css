@@ -309,7 +309,7 @@ input[type=text] {
     }
 
     .ans-btns {
-        margin-top: 0;
+        margin: 1px;
         font-size: 0.6rem;
         border: 1px solid black;
         width: 60vw;
@@ -468,12 +468,21 @@ input[type=text] {
         height: 7vh;
     }
 
+    #play-again-btn {
+        height: 7vh;
+    }
+
    .ans-btns {
     height: 8vh;
+    margin: 0.4rem;
    }
 
     #quiz-container {
         height: 56vh;
+    }
+
+    #question {
+        margin-bottom: 1rem;
     }
 }
 
