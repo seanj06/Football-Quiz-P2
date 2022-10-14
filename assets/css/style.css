@@ -55,6 +55,7 @@ body {
     text-align: center;
     margin-top: 0;
     animation: fadeIn 1s;
+    border-bottom: 1px solid black;
 }
 
 .question-container {
@@ -73,10 +74,11 @@ body {
 
 .ans-btns {
     width: 33vw;
-    height: 5vh;
+    height: 7vh;
     font-size: 1rem;
     border-radius: 10px;
-    border: 0.4rem solid black;
+    border-bottom: 0.4rem solid black;
+    border-right: 0.4rem solid black;
     background-color: cadetblue;
     color: white;
     animation: fadeIn 1s;

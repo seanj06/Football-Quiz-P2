@@ -105,7 +105,7 @@ function startGame() {
     currentScore = 0;
     setNextQuestion();
     hideWelcome();
-   // startTimer();
+    startTimer();
     stats.classList.remove('hide');
     statHeader.innerText = `${userNameText}'s current stats:`;
 }
