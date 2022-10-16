@@ -67,7 +67,7 @@ function welcomeMessage() {
     startButton.classList.add('hide');
     if (userNameText.length >= 3 && userNameText.length < 10) {
         welcomeAlert();
-    } else if (userNameText.replace(/\s/g, "").length <= 0) {
+    } else if (userNameText.length < 3 || userNameText.value == '' || userNameText.value.includes(/^[\s]/)) {
         usernameInvalid();
     }
 }
@@ -76,8 +76,7 @@ function welcomeMessage() {
  * Shows user welcome message with button to start the game
  */
 function welcomeAlert() {
-    userName.classList.add('hide');
-    nameLabel.classList.add('hide');
+    hideClass(userName, nameLabel);
     welcomeContainer.classList.remove('hide');
     welcomeContainer.classList.add('alert-container');
     welcomeText.innerText = `Welcome to the quiz ${userNameText}`;
@@ -90,7 +89,6 @@ function welcomeAlert() {
 function startGame() {
     hideClass(userName, nameLabel, startButton, ball, instructionButton);
     showClass(nextButton, questionElement, answerButtons, timer, stats);
-    ball.classList.add('hide');
     // Shuffles the questions to give a random array
     shuffleQuestions = questions.sort(() => Math.random() - .5);
     // Sorts the answers array to match up with the shuffled question
@@ -152,11 +150,9 @@ function selectAnswer(e) {
         answerButtons.style.border = 0;
     } else {
         hideClass(questionElement, answerButtons, timer, stats, okButton);
-        restartButton.classList.remove('hide');
-        alertContainer.classList.remove('hide');
+        showClass(restartButton, alertContainer, ball)
         alertContainer.classList.add('alert-container');
         stopTimer();
-        ball.classList.remove('hide');
         if (currentScore < 4) {
             alertText.innerText = `Better luck next time ${userNameText} you got ${currentScore} out of
              ${currentQuestion + 1} questions correct. Press the restart button to play again`;
@@ -196,15 +192,10 @@ function clearStatusClass(element) {
 function restartGame() {
     currentQuestion = 0;
     currentScore = 0;
-    showClass(startButton, userName, nameLabel, instructionButton, timeContainer);
-    hideClass(nextButton, questionElement, answerButtons, restartButton, timer);
+    showClass(startButton, userName, nameLabel, instructionButton, timeContainer, ball, okButton);
+    hideClass(nextButton, questionElement, answerButtons, restartButton, timer, stats, timeContainer, alertContainer);
     stopTimer();
-    stats.classList.add('hide');
-    ball.classList.remove('hide');
-    timeContainer.classList.add('hide');
-    alertContainer.classList.add('hide');
     alertContainer.classList.remove('alert-container');
-    okButton.classList.remove('hide');
 }
 
 /**
@@ -222,10 +213,8 @@ function resetState() {
  */
 function showInstructions() {
     alertContainer.classList.remove('hide');
+    hideClass(instructionButton, userName, nameLabel);
     alertContainer.classList.add('alert-container');
-    instructionButton.classList.add('hide');
-    userName.classList.add('hide');
-    nameLabel.classList.add('hide');
     alertText.innerText = "You have 100 seconds to answer 10 questions. Good luck!";
 }
 
@@ -235,10 +224,7 @@ function showInstructions() {
 function hideInstructions() {
     alertContainer.classList.add('hide');
     alertContainer.classList.remove('alert-container');
-    instructionButton.classList.remove('hide');
-    userName.classList.remove('hide');
-    nameLabel.classList.remove('hide');
-    startButton.classList.remove('hide');
+    showClass(instructionButton, userName, nameLabel, startButton);
 }
 
 /**
@@ -248,8 +234,7 @@ function usernameInvalid() {
     alertContainer.classList.remove('hide');
     alertContainer.classList.add('alert-container');
     alertText.innerText = "Please enter a valid username of between 3 and 9 characters";
-    userName.classList.add('hide');
-    nameLabel.classList.add('hide');
+    hideClass(userName, nameLabel);
 }
 
 /**
@@ -270,30 +255,30 @@ function startTimer() {
         if (currentTime > 0) {
             timer.innerText = `Time Left:${currentTime}s`;
         } else if (currentTime === 0) {
-            questionElement.classList.add('hide');
-            answerButtons.classList.add('hide');
+            hideClass(questionElement, answerButtons, nextButton);
             timeContainer.classList.remove('hide');
             timeContainer.classList.add('alert-container');
-            nextButton.classList.add('hide');
             timeText.innerText = `Sorry ${userNameText} you ran out of time`;
         }
     }, 1000);
 }
 
-function hideClass(class1, class2, class3, class4, class5) {
-    class1.classList.add('hide');
-    class2.classList.add('hide');
-    class3.classList.add('hide');
-    class4.classList.add('hide');
-    class5.classList.add('hide');
+/**
+ * Hides classes, takes infinite number of arguments
+ */
+function hideClass() {
+    for (let i = 0; i < arguments.length; i++) {
+        arguments[i].classList.add('hide');
+    }
 }
 
-function showClass(class1, class2, class3, class4, class5) {
-    class1.classList.remove('hide');
-    class2.classList.remove('hide');
-    class3.classList.remove('hide');
-    class4.classList.remove('hide');
-    class5.classList.remove('hide');
+/**
+ * Shows classes,takes infinite number of arguments
+ */
+function showClass() {
+    for (let i = 0; i < arguments.length; i++) {
+        arguments[i].classList.remove('hide');
+    }
 }
 
 /**
