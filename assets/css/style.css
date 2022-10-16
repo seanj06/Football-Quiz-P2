@@ -104,7 +104,7 @@ body {
 
 .btn {
     margin: 15px;
-    width: 30vw;
+    width: 33vw;
     height: 5vh;
     border-radius: 10px;
     border: 3px solid steelblue;
@@ -112,6 +112,24 @@ body {
     color: white;
     font-size: 1rem;
     text-align: center;
+}
+
+.next-btn {
+    width: 33vw;
+    height: 7vh;
+    border: 3px solid steelblue;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.next-btn:hover {
+    cursor: pointer;
+    color: white;
+    background-color: dimgray;
 }
 
 .btn:hover {
@@ -289,7 +307,6 @@ input[type=text] {
     .alertbox-text {
         font-size: 1rem;
         padding: 10px;
-        width: 60vw;
     }
 
     .hero-text {
@@ -306,7 +323,7 @@ input[type=text] {
 
     #question {
         font-size: 0.8rem;
-        margin-bottom: 3px;
+        margin-bottom: 0.5rem;
     }
 
     .ans-btns {
@@ -322,7 +339,7 @@ input[type=text] {
     }
 
     .stats-text {
-        margin-bottom: 2px;
+        margin-bottom: 0.7rem;
         font-size: 1rem;
     }
 
@@ -478,12 +495,20 @@ input[type=text] {
     margin: 0.4rem;
    }
 
+   .next-btn {
+    margin-top: 0.3rem;
+   }
+
     #quiz-container {
         height: 56vh;
     }
 
     #question {
         margin-bottom: 1rem;
+    }
+
+    .alertbox-text {
+        font-size: 1rem;
     }
 }
 
@@ -501,5 +526,15 @@ input[type=text] {
     .hero-text {
         font-size: 3.5rem;
     }
+}
+
+/* For extra large devices */
+
+@media screen and (min-height: 1025px) {
+    .ans-btns {
+        height: 8vh;
+    }
+
+    
 }
 

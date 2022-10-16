@@ -97,7 +97,7 @@ function startGame() {
     currentScore = 0;
     setNextQuestion();
     hideWelcome();
-    startTimer();
+    //startTimer();
     statHeader.innerText = `${userNameText}'s current stats:`;
 }
 
@@ -108,8 +108,8 @@ function startGame() {
 function setNextQuestion() {
     resetState();
     showQuestion(shuffleQuestions[currentQuestion]);
-    qText.innerText = `Current Question:${currentQuestion + 1} out of ${totalQuestions}`;
-    aText.innerText = `Correct answers ${currentScore} out of ${currentQuestion}`;
+    qText.innerText = `Current Question: ${currentQuestion + 1} out of ${totalQuestions}`;
+    aText.innerText = `Correct answers: ${currentScore} out of ${currentQuestion}`;
 }
 
 /**
