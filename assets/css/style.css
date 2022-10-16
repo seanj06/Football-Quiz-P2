@@ -381,7 +381,7 @@ input[type=text] {
 
 @media screen and (min-height: 800px) and (max-width: 400px) {
     .ans-btns {
-        height: 8vh;
+        height: 7vh;
     }
 
     .btn {
@@ -405,7 +405,7 @@ input[type=text] {
     }
 
     #question {
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin-bottom: 5rem;
     }
 
@@ -535,6 +535,6 @@ input[type=text] {
         height: 8vh;
     }
 
-    
+
 }
 

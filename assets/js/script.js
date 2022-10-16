@@ -82,7 +82,6 @@ function welcomeAlert() {
     welcomeText.innerText = `Welcome to the quiz ${userNameText}`;
 }
 
-
 /**
  * Starts the game when the got it button is clicked after user has entered a valid username
  */
@@ -97,7 +96,7 @@ function startGame() {
     currentScore = 0;
     setNextQuestion();
     hideWelcome();
-    //startTimer();
+    startTimer();
     statHeader.innerText = `${userNameText}'s current stats:`;
 }
 
