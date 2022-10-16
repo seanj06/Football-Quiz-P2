@@ -39,6 +39,7 @@ const stats = document.getElementById('stats');
 const statHeader = document.getElementById('stats-header');
 const qText = document.getElementById('q-text');
 const aText = document.getElementById('a-text');
+let len;
 
 // Button event listeners
 
@@ -63,11 +64,12 @@ playAgainBtn.addEventListener('click', restartGame);
  * Checks if input username is valid if it isnt runs welcomeAlert function and if not shows user error message
  */
 function welcomeMessage() {
-    userNameText = document.getElementById('username').value;
+    userNameText = document.getElementById('username').value.trim();
     startButton.classList.add('hide');
+    len = userNameText.trim();
     if (userNameText.length >= 3 && userNameText.length < 10) {
         welcomeAlert();
-    } else if (userNameText.length < 3 || userNameText.value == '' || userNameText.value.includes(/^[\s]/)) {
+    } else if (userNameText.length < 3) {
         usernameInvalid();
     }
 }
