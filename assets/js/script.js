@@ -39,7 +39,6 @@ const stats = document.getElementById('stats');
 const statHeader = document.getElementById('stats-header');
 const qText = document.getElementById('q-text');
 const aText = document.getElementById('a-text');
-let len;
 
 // Button event listeners
 
@@ -66,7 +65,6 @@ playAgainBtn.addEventListener('click', restartGame);
 function welcomeMessage() {
     userNameText = document.getElementById('username').value.trim();
     startButton.classList.add('hide');
-    len = userNameText.trim();
     if (userNameText.length >= 3 && userNameText.length < 10) {
         welcomeAlert();
     } else if (userNameText.length < 3) {
@@ -194,9 +192,11 @@ function clearStatusClass(element) {
 function restartGame() {
     currentQuestion = 0;
     currentScore = 0;
-    showClass(startButton, userName, nameLabel, instructionButton, timeContainer, ball, okButton);
+    showClass(startButton, userName, nameLabel, instructionButton, ball, okButton);
     hideClass(nextButton, questionElement, answerButtons, restartButton, timer, stats, timeContainer, alertContainer);
     stopTimer();
+    userName.value = '';
+    timeContainer.classList.remove('alert-container');
     alertContainer.classList.remove('alert-container');
 }
 
@@ -237,7 +237,9 @@ function usernameInvalid() {
     alertContainer.classList.add('alert-container');
     alertText.innerText = "Please enter a valid username of between 3 and 9 characters";
     hideClass(userName, nameLabel);
+    userName.value = '';
 }
+
 
 /**
  * Hides welcome message, runs when game is started
