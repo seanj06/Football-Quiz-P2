@@ -11,7 +11,7 @@ const playAgainBtn = document.getElementById("play-again-btn");
 // Input Field
 let userNameText = document.getElementById('username').value;
 const userName = document.getElementById('username');
-const inputField = document.getElementById('name-input');
+//const inputField = document.getElementById('name-input');
 const nameLabel = document.getElementById('name-label');
 // Quiz Container
 const questionElement = document.getElementById('question');
@@ -29,7 +29,6 @@ let currentQuestion;
 let shuffleAnswers;
 // Variables needed to keep score
 let currentScore = 0;
-let correctAnswer = 0;
 const totalQuestions = 10;
 // Timer variables
 let timer = document.getElementById('timer');
@@ -143,6 +142,7 @@ function selectAnswer(e) {
     }
     Array.from(answerButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
+        button.disabled = true;
     });
     if (shuffleQuestions.length > currentQuestion + 1) {
         nextButton.classList.remove('hide');
@@ -161,7 +161,7 @@ function selectAnswer(e) {
         } else {
             alertText.innerText = `Well done ${userNameText} you got ${currentScore} out of
              ${currentQuestion + 1} questions correct. Press the restart button to play again`;
-        }
+        };
     }
 }
 
