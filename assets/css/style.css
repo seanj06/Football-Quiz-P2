@@ -59,7 +59,7 @@ body {
 
 .question-container {
     height: 20vh;
-    width:50vw;
+    width: 50vw;
     border: 1px solid black;
 }
 
@@ -85,8 +85,13 @@ body {
 }
 
 @keyframes fadeIn {
-    0% {opacity: 0;}
-    100%{opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -396,6 +401,11 @@ input[type=text] {
     .stats-text {
         margin-bottom: 5px;
     }
+
+    #ok-btn {
+        width: 30vw;
+        height: 6vh;
+    }
 }
 
 /* Medium size tablets */
@@ -495,14 +505,14 @@ input[type=text] {
         height: 7vh;
     }
 
-   .ans-btns {
-    height: 8vh;
-    margin: 0.4rem;
-   }
+    .ans-btns {
+        height: 8vh;
+        margin: 0.4rem;
+    }
 
-   .next-btn {
-    margin-top: 0.3rem;
-   }
+    .next-btn {
+        margin-top: 0.3rem;
+    }
 
     #quiz-container {
         height: 56vh;
@@ -517,9 +527,60 @@ input[type=text] {
     }
 }
 
+/* Landscape large mobile devices */
+
+@media screen and (orientation:landscape) and (min-width: 851px) and (max-width: 950px) {
+    #question {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+    }
+
+    .alertbox-text {
+        font-size: 1rem;
+    }
+
+    .ball-img {
+        width: 20vh;
+        height: 15vh;
+    }
+
+    .btn {
+        height: 8vh;
+    }
+
+    .alert-container {
+        height: 40vh;
+        width: 55vh;
+    }
+
+    #ok-btn {
+        height: 8vh;
+    }
+
+    #go-btn {
+        height: 8vh;
+    }
+
+    #play-again-btn {
+        height: 8vh;
+    }
+
+    #name-label {
+        margin-top: 50px;
+    }
+
+    .next-btn {
+        margin: 0;
+    }
+
+    .stats-container {
+        height: 27vh;
+    }
+}
+
 /* For landscape tablets */
 
-@media screen and (orientation:landscape) and (min-width: 900px) {
+@media screen and (orientation:landscape) and (min-width: 965px) {
     .ans-btns {
         height: 9vh;
     }
@@ -542,4 +603,3 @@ input[type=text] {
 
 
 }
-
