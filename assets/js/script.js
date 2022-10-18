@@ -68,7 +68,11 @@ function welcomeMessage() {
         welcomeAlert();
     } else if (userNameText.length < 3 || userNameText.length > 9) {
         usernameInvalid();
+    } else {
+        alert(`Unknown input ${userNameText}`);
+        throw `Unknown input ${userNameText}. Aborting`;
     }
+
 }
 
 /**
@@ -160,10 +164,13 @@ function selectAnswer(e) {
         } else if (currentScore < 7) {
             alertText.innerText = `Not bad ${userNameText} you got ${currentScore} out of 
             ${currentQuestion + 1} questions correct. Press the restart button to play again`;
-        } else {
+        } else if (currentScore >= 7) {
             alertText.innerText = `Well done ${userNameText} you got ${currentScore} out of
              ${currentQuestion + 1} questions correct. Press the restart button to play again`;
-        };
+        } else {
+            alert(`Unknown final score ${currentScore}`);
+            throw `Unknown final score ${currentScore}. Aborting`;
+        }
     }
 }
 
