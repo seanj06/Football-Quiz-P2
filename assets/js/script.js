@@ -63,7 +63,7 @@ playAgainBtn.addEventListener('click', restartGame);
  */
 function welcomeMessage() {
     userNameText = document.getElementById('username').value.trim();
-    startButton.classList.add('hide');
+    hideClass(startButton, instructionButton);
     if (userNameText.length >= 3 && userNameText.length < 10) {
         welcomeAlert();
     } else if (userNameText.length < 3 || userNameText.length > 9) {
@@ -216,7 +216,7 @@ function resetState() {
  */
 function showInstructions() {
     alertContainer.classList.remove('hide');
-    hideClass(instructionButton, userName, nameLabel);
+    hideClass(instructionButton, userName, nameLabel, startButton);
     alertContainer.classList.add('alert-container');
     alertText.innerText = "You have 100 seconds to answer 10 questions. Good luck!";
 }
