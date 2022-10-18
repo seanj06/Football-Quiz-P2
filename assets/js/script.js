@@ -66,7 +66,7 @@ function welcomeMessage() {
     startButton.classList.add('hide');
     if (userNameText.length >= 3 && userNameText.length < 10) {
         welcomeAlert();
-    } else if (userNameText.length < 3) {
+    } else if (userNameText.length < 3 || userNameText.length > 9) {
         usernameInvalid();
     }
 }
