@@ -120,6 +120,9 @@ function showQuestion(question) {
         const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('ans-btns');
+        button.addEventListener('click', function () {
+            button.classList.add('click');
+        })
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
@@ -146,7 +149,6 @@ function selectAnswer(e) {
     });
     if (shuffleQuestions.length > currentQuestion + 1) {
         nextButton.classList.remove('hide');
-        answerButtons.style.border = 0;
     } else {
         hideClass(questionElement, answerButtons, timer, stats, okButton);
         showClass(restartButton, alertContainer, ball)

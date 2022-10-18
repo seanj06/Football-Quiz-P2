@@ -76,8 +76,8 @@ body {
     height: 7vh;
     font-size: 1rem;
     border-radius: 10px;
-    border-bottom: 0.4rem solid black;
-    border-right: 0.4rem solid black;
+    border-bottom: 0.5rem solid black;
+    border-right: 0.5rem solid black;
     background-color: cadetblue;
     color: white;
     animation: fadeIn 1s;
@@ -91,8 +91,13 @@ body {
 
 
 .ans-btns:hover {
-    border: 0;
     cursor: pointer;
+    color: blue;
+}
+
+.click {
+    border: 0;
+    color: black;
 }
 
 /* Start and restart buttons */
