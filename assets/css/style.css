@@ -97,7 +97,6 @@ body {
 
 .ans-btns:hover {
     cursor: pointer;
-    color: blue;
 }
 
 .click {
@@ -216,7 +215,7 @@ input[type=text] {
     flex-direction: column;
     justify-content: space-around;
     height: 30vh;
-    width: 35vh;
+    width: 40vw;
     max-width: 90%;
     margin: auto;
     border-radius: 50px;
@@ -246,7 +245,7 @@ input[type=text] {
 
 .alertbox-text {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.9rem;
     padding: 25px;
 }
 
@@ -271,6 +270,7 @@ input[type=text] {
     margin: auto;
     width: 20vw;
     height: 5vh;
+    max-width: 80%;
     border-radius: 10px;
     border: 3px solid steelblue;
     background-color: black;
@@ -313,7 +313,7 @@ input[type=text] {
 
 /* Extra small phones */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 385px) {
     .alertbox-text {
         font-size: 1rem;
         padding: 10px;
@@ -356,6 +356,10 @@ input[type=text] {
     #play-again-btn {
         height: 9vh;
     }
+
+    .alert-container {
+        width: 60vw;
+    }
 }
 
 /* Large phones and small tablets */
@@ -389,13 +393,17 @@ input[type=text] {
 
 /* Specific type medium size phones */
 
-@media screen and (min-height: 800px) and (max-width: 400px) {
+@media screen and (min-height: 800px) and (max-width: 420px) {
     .ans-btns {
         height: 7vh;
     }
 
     .btn {
         margin: 10px;
+    }
+
+    .alertbox-text {
+        font-size: 1.4rem;
     }
 
     .stats-text {
@@ -405,6 +413,11 @@ input[type=text] {
     #ok-btn {
         width: 30vw;
         height: 6vh;
+    }
+
+    .alert-container {
+        height: 35vh;
+        width: 60vw;
     }
 }
 
@@ -604,7 +617,7 @@ input[type=text] {
 
 /* For extra large devices */
 
-@media screen and (min-height: 1025px) {
+@media screen and (min-height: 950px) {
     .ans-btns {
         height: 8vh;
     }

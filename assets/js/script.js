@@ -133,7 +133,7 @@ function showQuestion(question) {
         button.addEventListener('click', selectAnswer);
         answerButtons.appendChild(button);
     });
-}
+};
 
 /**
  * Checks that the users clicked answer has the dataset of correct and if it is increments current score by 1
@@ -271,6 +271,7 @@ function startTimer() {
             timeContainer.classList.remove('hide');
             timeContainer.classList.add('alert-container');
             timeText.innerText = `Sorry ${userNameText} you ran out of time`;
+            timer.classList.add('hide');
         }
     }, 1000);
 }
