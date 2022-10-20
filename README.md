@@ -132,6 +132,21 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
     The stats section has 3 parts, the header showing the users inputted username, the live current question counter and the live correct answer counter
    ![stat-section](README-images/stat-section.png)
 
+ - End Game Messages
+
+   - When the quiz is complete the user is given a message telling them their score out of 10 and instructing them to press the restart button to play again.
+
+   - There are 3 different end game messages depending on the users final score.
+
+     - If the users final score is less than 4
+     ![under4-score](README-images/less-than-4.png) 
+
+     - If the users final score is between 4 and 6
+     ![4-6-score](README-images/4-6.png) 
+
+     - If the users final score is over 6
+     ![7+score](README-images/7-or-more.png)
+
     
 
 
