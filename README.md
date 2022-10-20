@@ -66,7 +66,7 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 
 ## Features
 
-  ### Start screen  
+### Start screen  
   ![start-screen](README-images/start-screen.png)
 
   The start screen is complete with a Football Quiz logo with arcade type font, an image of a football, A username input section, a start button and an instruction button.
@@ -82,7 +82,42 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
     - If the user inputs a valid username a welcome message appears.
     ![welcome-message](README-images/welcome-message.png)
 
-  - #### Instructions button  
+  - #### Instructions button 
+
+    -  When the user clicks the instruction button they are shown a message which tells them they have 100 seconds to answer 10 questions.
+    ![instruction-text](README-images/Instructions-png.png)
+
+### Quiz screen
+  ![quiz-screen](README-images/quiz-screen.png) 
+  The main quiz screen includes the Football quiz logo, a timer container, the main quiz section container and a stat section container.
+
+ - Timer
+
+   - The timer is shown at the top of the screen just below the logo and counts down from 100 seconds on game start.
+   ![timer](README-images/timer.png)
+
+   - If the timer runs out the user is shown a message telling them they ran out of time and a play again button to restart the game.
+   ![out-of-time](README-images/out-of-time.png)
+
+ - Main Quiz Section 
+
+   The main quiz section features the current question at the top, 4 answer buttons and a next button which moves to the next question once an answer has been selected.
+   ![main-quiz-section](README-images/main-quiz.png)
+
+    - Question
+    
+      The question is displayed at the top of the section and has a solid underlined border to seperate it from the answer buttons.
+      ![question](README-images/question.png)
+
+    - Answer buttons
+     ![answer-buttons](README-images/ans-btns.png)
+     
+       - The answer buttons are displayed in 2 columns of 2 buttons 
+
+       - The answer buttons change color to either red or green to show the user what the correct answer was.
+       The text of the button clicked by the user turns to black and the border is also removed to give the clicked in button effect.
+       ![clicked-buttons](README-images/clicked-buttons.png) 
+
     
 
 
