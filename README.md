@@ -63,6 +63,26 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
     - The 2 main fonts used in the site are 'Bungee Spice' and 'Oswald' both taken from google fonts, with a fallback font of sans-serif. 
 
     - The font used for the Hero Logo is 'Bungee Spice' while the font used for all other body text is 'Oswald'.
+
+## Features
+
+  ### Start screen  
+  ![start-screen](README-images/start-screen.png)
+
+  The start screen is complete with a Football Quiz logo with arcade type font, an image of a football, A username input section, a start button and an instruction button.
+
+  - #### Name input
+  
+    - On game start the users are shown an input box with the label "Enter your username"
+    ![name-input](README-images/input.png)
+
+    - If the user inputs in invalid username an alert message appears telling the user to input a valid username.
+    ![invalid-username](README-images/invalid-username.png)
+
+    - If the user inputs a valid username a welcome message appears.
+    ![welcome-message](README-images/welcome-message.png)
+
+  - #### Instructions button  
     
 
 
