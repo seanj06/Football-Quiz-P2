@@ -126,14 +126,14 @@ function showQuestion(question) {
         button.classList.add('ans-btns');
         button.addEventListener('click', function () {
             button.classList.add('click');
-        })
+        });
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
         button.addEventListener('click', selectAnswer);
         answerButtons.appendChild(button);
     });
-};
+}
 
 /**
  * Checks that the users clicked answer has the dataset of correct and if it is increments current score by 1
@@ -155,7 +155,7 @@ function selectAnswer(e) {
         nextButton.classList.remove('hide');
     } else {
         hideClass(questionElement, answerButtons, timer, stats, okButton);
-        showClass(restartButton, alertContainer, ball)
+        showClass(restartButton, alertContainer, ball);
         alertContainer.classList.add('alert-container');
         stopTimer();
         if (currentScore < 4) {
@@ -521,3 +521,4 @@ const questions = [{
 
 
 ];
+
