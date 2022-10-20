@@ -147,6 +147,32 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
      - If the users final score is over 6
      ![7+score](README-images/7-or-more.png)
 
+## Testing
+
+* I have tested this website works on all browser types.
+
+* I have tested the site on various screen sizes and devices using devtools and confirmed it is responsive to all sizes.
+
+* I have tested all of the clickable links work and open in new tabs and have tested that all form elements in the form section work correctly and are required to submit.
+
+### Validator testing
+
+- No errors were shown when putting the code through the w3c html validator.
+![w3c-validation](README-images/w3c.png)
+
+- No errors were shown when putting the code through the jigsaw css validator.
+![jigsaw-validation](README-images/jigsaw.png)
+
+### Accessibility
+
+ - The site received high scores on both mobile and desktop when put through lighthouse testing.
+
+   - Lighthouse desktop
+   ![lh-desktop](README-images/lh-desktop.png)
+
+   - Lighthouse mobile
+   ![lh-mobile](README-images/lh-mobile.png)
+
     
 
 
