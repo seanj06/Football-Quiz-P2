@@ -117,6 +117,20 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
        - The answer buttons change color to either red or green to show the user what the correct answer was.
        The text of the button clicked by the user turns to black and the border is also removed to give the clicked in button effect.
        ![clicked-buttons](README-images/clicked-buttons.png) 
+      
+      - On devices 375 pixels or less the buttons are displayed in 1 column.
+           
+          ![small-screen-buttons](README-images/small-screen-btns.png)
+
+   - Next Button 
+
+     -  The next button displays when a user has selected an answer, It then dissappears when the next question is shown until answer is selected again.
+    ![next-button](README-images/next-btn.png)  
+
+ -  Stats Section
+   
+    The stats section has 3 parts, the header showing the users inputted username, the live current question counter and the live correct answer counter
+   ![stat-section](README-images/stat-section.png)
 
     
 
