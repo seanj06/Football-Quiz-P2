@@ -170,6 +170,41 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 
 [Top of page](#football-quiz)
 
+## Technologies Used
+
+- HTML
+
+  - This project uses HTML as the main language for the structure of the website.
+
+- CSS 
+
+   - This project uses CSS to style the website.
+
+- Javascript
+
+   - This website uses javascript to make it interactive
+
+ - Google fonts
+
+   - Google fonts was used for custom fonts on the site
+
+- Chrome Developer tools
+
+   - Chrome dev tools was used for all website de bugging
+
+- Github
+
+   - Github was the cloud based platform used for version control
+
+- Gitpod / Vs code
+
+   - Gitpod and vs code were the I.D.E's used to create the website
+
+- Favicon.io 
+
+   - Favicon.io was the site used to create the websites favicon
+
+
 ## Testing
 
 * I have tested this website works on all browser types.
