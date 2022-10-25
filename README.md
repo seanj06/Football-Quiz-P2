@@ -43,10 +43,6 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 
    - As a first time user i want to be able to make a username.
 
- - #### Frequent users
-
-  - 
-
   ### 2. Design
 
   - #### Colors
@@ -188,6 +184,28 @@ However 2 Warnings are recorded 'A leading decimal point can be confused with a 
  | When testing I found on game end if the user completed the quiz before the timer ran out and restarted the game, a new timer would start but the old timer would not reset, causing 2 timerS to be running at the same time.| I found that I had coded my timer function incorrectly by creating a variable that could only accessed inside the timer function so in return the stop timer function could not execute correctly, so to fix this bug I created a global timer variable and re structured my start timer and stop timer functions. |
  | When testing I found that on my name input section, the user was allowed into the game by just pressing the space key and not actually typing any characters. | To fix this i added the .trim() built in function onto the end of the user input function which removes any whitespace either side of an input.
  | When testing I found that when pressed one after the other, the start and instruction buttons stack up causing the game to glitch. | To fix this I simply removed both buttons from view until the alert container was hidden again.
+
+  #### Unsolved Bugs
+
+  - There are no known unsolved bugs.
+
+### Testing User Stories
+
+ - As a first time user I want clear instructions on how to start the game.
+
+   - On the main menu of the quiz the user is shown a name input with a prompt to enter a username, there is also an instruction button that when clicked gives them instructions for the quiz and a start button that when clicked without a valid username tells the user to enter a valid username to continue.
+
+- As a first time user I want to be able to play the quiz on multiple devices.
+
+   - The quiz is responsive to all of desktop, tablet and mobile devices and the layout of the quiz changes to fit screens of extra small mobile devices.
+
+- As a first time user I want to be given information on my progress in the quiz.
+
+   - The stats section gives the users information on both the current question they are on, and the amount of correct answers. The timer at the top of the page also tells them how much time they have left.
+
+- As a first time user I want to be able to make a username
+
+   - Users are able to make a username before the game starts and that username will be given to them throughout the quiz including, welcoming them to the quiz, showing their current stats and telling them their final score on game end.
 
 
 
