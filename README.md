@@ -10,31 +10,50 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 ## Table Of Contents
 
 1.[Project Goals](#project-goals)
+  - [Main Goals](#main-goals-of-creating-this-site-include)
+  - [Target Audience](#target-audience-of-the-site-include)
 
 2.[User Experience(UX)](#user-experience-ux)
   - [User Stories](#1-user-stories)
   - [Design](#2-design)
+    - [Colors](#colors)
+    - [Fonts](#fonts)
 
 3.[Features](#features) 
   - [Start Screen](#start-screen) 
+    - [Name Input](#name-input)
+    - [Instruction Button](#instructions-button)
   - [Quiz Screen](#quiz-screen)
+    - [Timer](#timer)
+    - [Main Quiz Section](#main-quiz-section)
+    - [Next Button](#next-button)
 
-4.[Testing](#testing)  
+4.[Technologies Used](#technologies-used) 
+
+5.[Testing](#testing)  
   - [Validator Testing](#validator-testing)
   - [Accessibility](#accessibility)
   - [Bugs](#bugs)
+    - [Solved Bugs](#solved-bugs)
+    - [Unsolved Bugs](#unsolved-bugs)
   - [Testing User Stories](#testing-user-stories)
 
-5.[Deployment](#deployment)  
+6.[Deployment](#deployment)  
+  - [Github Pages](#github-pages)
+  - [Forking The Repository](#forking-the-repository)
 
-6.[Credits](#credits)
+7.[Credits](#credits)
+  - [Content And Code](#content-and-code)
+  - [Media](#media)
+  - [Research](#research)
+
   
 
 ## Project Goals
 
 - This quiz was created for project 2 of Code Institutes Diploma in full stack web development.
 
-* Main goals of creating this site include
+- ### Main goals of creating this site include
 
   - Creating a multiple choice quiz using HTML, CSS and JavaScript.
 
@@ -46,7 +65,7 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 
   - Making the site fully responsive for all device sizes.
 
-* Target audience of the site include
+- ### Target audience of the site include
 
   - Users that have an interest in football and want to test their knowledge.
 
@@ -112,7 +131,7 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
   ![quiz-screen](README-images/quiz-screen.png) 
   The main quiz screen includes the Football quiz logo, a timer container, the main quiz section container and a stat section container.
 
- - Timer
+ - #### Timer
 
    - The timer is shown at the top of the screen just below the logo and counts down from 100 seconds on game start.
    ![timer](README-images/timer.png)
@@ -120,7 +139,7 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
    - If the timer runs out the user is shown a message telling them they ran out of time and a play again button to restart the game.
    ![out-of-time](README-images/out-of-time.png)
 
- - Main Quiz Section 
+ - #### Main Quiz Section 
 
    The main quiz section features the current question at the top, 4 answer buttons and a next button which moves to the next question once an answer has been selected.
    ![main-quiz-section](README-images/main-quiz.png)
@@ -143,17 +162,17 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
            
           ![small-screen-buttons](README-images/small-screen-btns.png)
 
-   - Next Button 
+   - #### Next Button 
 
      -  The next button displays when a user has selected an answer, It then dissappears when the next question is shown until answer is selected again.
     ![next-button](README-images/next-btn.png)  
 
- -  Stats Section
+ - #### Stats Section
    
     The stats section has 3 parts, the header showing the users inputted username, the live current question counter and the live correct answer counter
    ![stat-section](README-images/stat-section.png)
 
- - End Game Messages
+ - #### End Game Messages
 
    - When the quiz is complete the user is given a message telling them their score out of 10 and instructing them to press the restart button to play again.
 
@@ -203,6 +222,9 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 - Favicon.io 
 
    - Favicon.io was the site used to create the websites favicon
+
+   [Top of page](#football-quiz)
+
 
 
 ## Testing
