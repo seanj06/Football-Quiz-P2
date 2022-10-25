@@ -1,5 +1,5 @@
 # Football Quiz
-A Football(soccer) quiz complete 10 questions, username feedback, live score and question counter and a timer.
+A Football(soccer) quiz complete with 10 questions, username feedback, live score and question counter and a timer.
 
 Website developed by Sean Johnston for Code Institute Project Portfolio 2 using HTML, CSS and JavaScript.
 

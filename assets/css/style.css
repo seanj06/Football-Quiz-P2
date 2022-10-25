@@ -215,7 +215,7 @@ input[type=text] {
     flex-direction: column;
     justify-content: space-around;
     height: 30vh;
-    width: 50vw;
+    width: 55vw;
     max-width: 90%;
     margin: auto;
     border-radius: 50px;
@@ -245,7 +245,7 @@ input[type=text] {
 
 .alertbox-text {
     text-align: center;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     padding: 25px;
 }
 
