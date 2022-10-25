@@ -35,13 +35,13 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 
  - #### First time users
 
-   - As a first time user i want clear instructions on how to start the game.
+   - As a first time user I want clear instructions on how to start the game.
 
-   - As a first time user i want to be able to play the quiz on multiple devices.
+   - As a first time user I want to be able to play the quiz on multiple devices.
 
-   - As a first time user i want to be given information on my progress in the quiz.
+   - As a first time user I want to be given information on my progress in the quiz.
 
-   - As a first time user i want to be able to make a username.
+   - As a first time user I want to be able to make a username.
 
   ### 2. Design
 
@@ -207,7 +207,29 @@ However 2 Warnings are recorded 'A leading decimal point can be confused with a 
 
    - Users are able to make a username before the game starts and that username will be given to them throughout the quiz including, welcoming them to the quiz, showing their current stats and telling them their final score on game end.
 
+## Deployment
 
+### Github pages
+
+ - This website was deployed on github pages using the following steps.
+ 
+   - In the Github repository navigate to the settings tab.
+   -  From the settings menu scroll down to pages and click it.
+   - In the source section of the pages menu navigate to the branch section and select main.
+   - Click save and the page will automatically refresh.
+
+   - Navigate back to the pages section and the live link of the published  site will now be there.
+   - [Link to site](https://seanj06.github.io/Football-Quiz-P2/)
+
+ ### Forking the repository  
+
+ - The repository can be forked using the following steps.
+
+   - Log in to github and locate the repository [Football-Quiz-P2](https://github.com/seanj06/Football-Quiz-P2)
+
+   - Click on the repository and at the top right of the page locate the fork button.
+
+   - When you have pressed the fork button you should now have a full copy of the repository.
 
     
 
