@@ -282,6 +282,13 @@ function startTimer() {
 }
 
 /**
+ * Resets Timer when it hits zero
+ */
+ function stopTimer() {
+    clearInterval(gameTimer);
+}
+
+/**
  * Hides classes, takes infinite number of arguments
  */
 function hideClass() {
@@ -297,13 +304,6 @@ function showClass() {
     for (let i = 0; i < arguments.length; i++) {
         arguments[i].classList.remove('hide');
     }
-}
-
-/**
- * Resets Timer when it hits zero
- */
-function stopTimer() {
-    clearInterval(gameTimer);
 }
 
 // Quiz questions

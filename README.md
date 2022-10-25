@@ -60,6 +60,8 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 
     - The font used for the Hero Logo is 'Bungee Spice' while the font used for all other body text is 'Oswald'.
 
+[Top of page](#football-quiz)
+
 ## Features
 
 ### Start screen  
@@ -143,6 +145,8 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
      - If the users final score is over 6
      ![7+score](README-images/7-or-more.png)
 
+[Top of page](#football-quiz)
+
 ## Testing
 
 * I have tested this website works on all browser types.
@@ -173,6 +177,8 @@ However 2 Warnings are recorded 'A leading decimal point can be confused with a 
 
    - Lighthouse mobile
    ![lh-mobile](README-images/lh-mobile.png)
+
+[Top of page](#football-quiz)
 
 ### Bugs
 
@@ -207,6 +213,8 @@ However 2 Warnings are recorded 'A leading decimal point can be confused with a 
 
    - Users are able to make a username before the game starts and that username will be given to them throughout the quiz including, welcoming them to the quiz, showing their current stats and telling them their final score on game end.
 
+[Top of page](#football-quiz)
+
 ## Deployment
 
 ### Github pages
@@ -231,6 +239,8 @@ However 2 Warnings are recorded 'A leading decimal point can be confused with a 
 
    - When you have pressed the fork button you should now have a full copy of the repository.
 
+[Top of page](#football-quiz)
+
 ## Credits
 
 - ### Content and code
@@ -254,6 +264,8 @@ However 2 Warnings are recorded 'A leading decimal point can be confused with a 
   - [Code Institute LMS](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwim9I2zwvv6AhUOtu0KHfviCIwYABAAGgJkZw&ohost=www.google.com&cid=CAESbOD2VcMjWoPOdW1tbLgQgw8S4EBJlhlFi41LS7vVf1YQxjHw5wwKSCMur896-Q3O3rubwxhGsVxLj6MuGnURCfNxcNQR51XOH-mjIEX-ZXTWAl2WWJ-dS0mSruCh43w4CRoPiLbNqZWQG5Q7sg&sig=AOD64_2KLoDtHuB6EOxRKQC5PiyjZjy9kA&q&adurl&ved=2ahUKEwiK94ezwvv6AhUVSUEAHVJxBEwQ0Qx6BAgIEAE) content was used to help me build the quiz along the way
 
   - [Youtube](https://www.youtube.com/) was used to research how to go about building a javascript quiz.
+
+[Top of page](#football-quiz)
 
 
 
