@@ -313,21 +313,37 @@ input[type=text] {
 
 .error-header {
     font-family: 'Bungee Spice', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 5rem;
+    font-size: 4rem;
+    margin-bottom: 6rem;
+    text-align: center;
 }
 
 .error-message {
     font-family: 'Oswald', sans-serif;
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
+    text-align: center;
 }
 
 .error-home-button {
+    text-decoration: none;
     text-align: center;
-    border: 1rem solid black;
-    border-radius: 10px;
+    align-items: center;
+    border: 1px solid black;
+    padding: 3rem;
+    border-radius: 15px;
     background-color: azure;
+    color: black;
+    font-size: 3rem;
+    margin: auto;
+    display: block;
+    width: 25vw;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 
