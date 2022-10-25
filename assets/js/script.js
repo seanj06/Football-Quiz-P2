@@ -284,7 +284,7 @@ function startTimer() {
 /**
  * Resets Timer when it hits zero
  */
- function stopTimer() {
+function stopTimer() {
     clearInterval(gameTimer);
 }
 
@@ -526,4 +526,3 @@ const questions = [{
 
 
 ];
-

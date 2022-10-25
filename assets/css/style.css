@@ -215,7 +215,7 @@ input[type=text] {
     flex-direction: column;
     justify-content: space-around;
     height: 30vh;
-    width: 55vw;
+    width: 60vw;
     max-width: 90%;
     margin: auto;
     border-radius: 50px;
@@ -245,7 +245,7 @@ input[type=text] {
 
 .alertbox-text {
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     padding: 25px;
 }
 
@@ -364,7 +364,7 @@ input[type=text] {
 
 /* Large phones and small tablets */
 
-@media screen and (min-height: 800px) {
+@media screen and (min-height: 820px) {
     #name-label {
         font-size: 2.2rem;
         margin-top: 100px;
@@ -393,7 +393,7 @@ input[type=text] {
 
 /* Specific type medium size phones */
 
-@media screen and (min-height: 780px) and (max-width: 420px) {
+@media screen and (min-height: 780px) and (max-width: 374px) {
     .ans-btns {
         height: 7vh;
     }
@@ -415,10 +415,6 @@ input[type=text] {
         height: 6vh;
     }
 
-    .alert-container {
-        height: 35vh;
-        width: 60vw;
-    }
 }
 
 /* Medium size tablets */
@@ -434,7 +430,6 @@ input[type=text] {
 
     #question {
         font-size: 1.8rem;
-        margin-bottom: 5rem;
     }
 
     .ans-btns {
@@ -452,11 +447,6 @@ input[type=text] {
 
     .alertbox-text {
         font-size: 2rem;
-    }
-
-    .alert-container {
-        height: 24vh;
-        width: 32vh;
     }
 
     .button-group {
@@ -617,9 +607,13 @@ input[type=text] {
 
 /* For extra large devices */
 
-@media screen and (min-height: 950px) {
+@media screen and (min-width: 770px) and (min-height:1024px) {
     .ans-btns {
         height: 8vh;
+    }
+    
+    #question {
+        margin-bottom: 5rem;
     }
 
 
