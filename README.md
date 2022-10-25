@@ -231,6 +231,32 @@ However 2 Warnings are recorded 'A leading decimal point can be confused with a 
 
    - When you have pressed the fork button you should now have a full copy of the repository.
 
+## Credits
+
+- ### Content and code
+
+  -  Code institute gitpod template was used and taken from https://github.com/Code-Institute-Org/gitpod-database-config
+
+  - The 2 fonts used on this site "Bungee Spice" and "Oswald" taken from [Google Fonts](https://fonts.google.com)
+
+  - Part of the quiz was built following a tutorial from Web Dev simplifieds build a javascript quiz youtube video.( The functions on displaying the shuffled questions, and clicked answers.) Each part of javascript code that was taken has been commented appropriately in the javascript file. https://www.youtube.com/watch?v=riDzcEQbX6k
+
+- ### Media 
+
+  - The football hero image and background image were taken from [Pexels.com](https://www.pexels.com/)
+
+- ### Research
+
+  - [Stack Overflow](https://stackoverflow.com/) was used to solve various bugs and issues I had along the way.
+
+  - [W3schools](https://www.w3schools.com/) was used for research on various javascript syntax.
+
+  - [Code Institute LMS](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwim9I2zwvv6AhUOtu0KHfviCIwYABAAGgJkZw&ohost=www.google.com&cid=CAESbOD2VcMjWoPOdW1tbLgQgw8S4EBJlhlFi41LS7vVf1YQxjHw5wwKSCMur896-Q3O3rubwxhGsVxLj6MuGnURCfNxcNQR51XOH-mjIEX-ZXTWAl2WWJ-dS0mSruCh43w4CRoPiLbNqZWQG5Q7sg&sig=AOD64_2KLoDtHuB6EOxRKQC5PiyjZjy9kA&q&adurl&ved=2ahUKEwiK94ezwvv6AhUVSUEAHVJxBEwQ0Qx6BAgIEAE) content was used to help me build the quiz along the way
+
+  - [Youtube](https://www.youtube.com/) was used to research how to go about building a javascript quiz.
+
+
+
     
 
 
