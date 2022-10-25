@@ -7,6 +7,29 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 
 ![AmIResponsive](README-images/amiresponsive.png)
 
+## Table Of Contents
+
+1.[Project Goals](#project-goals)
+
+2.[User Experience(UX)](#user-experience-ux)
+  - [User Stories](#1-user-stories)
+  - [Design](#2-design)
+
+3.[Features](#features) 
+  - [Start Screen](#start-screen) 
+  - [Quiz Screen](#quiz-screen)
+
+4.[Testing](#testing)  
+  - [Validator Testing](#validator-testing)
+  - [Accessibility](#accessibility)
+  - [Bugs](#bugs)
+  - [Testing User Stories](#testing-user-stories)
+
+5.[Deployment](#deployment)  
+
+6.[Credits](#credits)
+  
+
 ## Project Goals
 
 - This quiz was created for project 2 of Code Institutes Diploma in full stack web development.
