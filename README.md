@@ -163,6 +163,11 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 - No errors were shown when putting the code through the jigsaw css validator.
 ![jigsaw-validation](README-images/jigsaw.png)
 
+- No errors were shown when putting the code through jshint javascript validator.
+However 2 Warnings are recorded 'A leading decimal point can be confused with a dot: '.5'. I have concluded that these errors are part of the code needed for the shuffle question and answer functions so are unfixable.
+![jshint](README-images/jshint.png)
+![shuffle-warning](README-images/shuffle.png)
+
 ### Accessibility
 
  - The site received high scores on both mobile and desktop when put through lighthouse testing.
@@ -172,6 +177,16 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 
    - Lighthouse mobile
    ![lh-mobile](README-images/lh-mobile.png)
+
+### Bugs
+
+  - Solved Bugs
+
+ | Description | Fix |
+ | ----------- | --- |
+ | When Testing I discovered when the user clicks the correct answer they are still able to click another button afterwards and the score keeps adding up | Disable the buttons after the first click |
+
+
 
     
 
