@@ -180,11 +180,14 @@ However 2 Warnings are recorded 'A leading decimal point can be confused with a 
 
 ### Bugs
 
-  - Solved Bugs
+  #### Solved Bugs
 
  | Description | Fix |
  | ----------- | --- |
- | When Testing I discovered when the user clicks the correct answer they are still able to click another button afterwards and the score keeps adding up | Disable the buttons after the first click |
+ | When Testing I discovered when the user clicks the correct answer they were still able to click another button afterwards which caused the score counter to keep incrementing without going onto the next question | I found disabling all of the answer buttons after the first click and the correct answer was shown fixed this bug|
+ | When testing I found on game end if the user completed the quiz before the timer ran out and restarted the game, a new timer would start but the old timer would not reset, causing 2 timerS to be running at the same time.| I found that I had coded my timer function incorrectly by creating a variable that could only accessed inside the timer function so in return the stop timer function could not execute correctly, so to fix this bug I created a global timer variable and re structured my start timer and stop timer functions. |
+ | When testing I found that on my name input section, the user was allowed into the game by just pressing the space key and not actually typing any characters. | To fix this i added the .trim() built in function onto the end of the user input function which removes any whitespace either side of an input.
+ | When testing I found that when pressed one after the other, the start and instruction buttons stack up causing the game to glitch. | To fix this I simply removed both buttons from view until the alert container was hidden again.
 
 
 
