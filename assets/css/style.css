@@ -309,6 +309,16 @@ input[type=text] {
     margin-bottom: 10px;
 }
 
+/* 404 page */
+
+.error-header {
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+.error-message {
+    font-family: 'Oswald', sans-serif;
+}
+
 /* Media queries */
 
 /* Extra small phones */
