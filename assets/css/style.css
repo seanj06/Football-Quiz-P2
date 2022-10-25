@@ -393,7 +393,7 @@ input[type=text] {
 
 /* Specific type medium size phones */
 
-@media screen and (min-height: 800px) and (max-width: 420px) {
+@media screen and (min-height: 780px) and (max-width: 420px) {
     .ans-btns {
         height: 7vh;
     }
