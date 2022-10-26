@@ -9,17 +9,17 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 
 ## Table Of Contents
 
-1.[Project Goals](#project-goals)
+1 [Project Goals](#project-goals)
   - [Main Goals](#main-goals-of-creating-this-site-include)
   - [Target Audience](#target-audience-of-the-site-include)
 
-2.[User Experience(UX)](#user-experience-ux)
+2 [User Experience(UX)](#user-experience-ux)
   - [User Stories](#1-user-stories)
   - [Design](#2-design)
     - [Colors](#colors)
     - [Fonts](#fonts)
 
-3.[Features](#features) 
+3 [Features](#features) 
   - [Start Screen](#start-screen) 
     - [Name Input](#name-input)
     - [Instruction Button](#instructions-button)
@@ -29,9 +29,9 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
     - [Next Button](#next-button)
   - [404 Page](#404-page)  
 
-4.[Technologies Used](#technologies-used) 
+4 [Technologies Used](#technologies-used) 
 
-5.[Testing](#testing)  
+5 [Testing](#testing)  
   - [Validator Testing](#validator-testing)
   - [Accessibility](#accessibility)
   - [Bugs](#bugs)
@@ -39,14 +39,16 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
     - [Unsolved Bugs](#unsolved-bugs)
   - [Testing User Stories](#testing-user-stories)
 
-6.[Deployment](#deployment)  
+6 [Deployment](#deployment)  
   - [Github Pages](#github-pages)
   - [Forking The Repository](#forking-the-repository)
 
-7.[Credits](#credits)
+7 [Credits](#credits)
   - [Content And Code](#content-and-code)
   - [Media](#media)
   - [Research](#research)
+
+8 [Acknowledgements](#acknowledgements)  
 
   
 
@@ -356,6 +358,15 @@ However 2 Warnings are recorded 'A leading decimal point can be confused with a 
 
   - [Youtube](https://www.youtube.com/) was used to research how to go about building a javascript quiz.
 
+## Acknowledgements  
+  
+  - Special thanks to my mentor Jubril Akolande who helped me with tips and finding bugs along the way.
+
+  - To my classmates Sean Finn and Victoria Traynor who helped review my project along the way and discussions about various issues and bugs.
+
+  - To the slack community as a whole for help and support through the whole project.
+
+ 
 [Top of page](#football-quiz)
 
 
