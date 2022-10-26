@@ -27,6 +27,7 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
     - [Timer](#timer)
     - [Main Quiz Section](#main-quiz-section)
     - [Next Button](#next-button)
+  - [404 Page](#404-page)  
 
 4.[Technologies Used](#technologies-used) 
 
@@ -186,6 +187,11 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 
      - If the users final score is over 6
      ![7+score](README-images/7-or-more.png)
+
+  ### 404 page
+
+   -  The site has a custom 404 page that tells the user that something went wrong and also includes a home button to take the user back to the main quiz menu.
+   ![404 Page](README-images/404.png)   
 
 [Top of page](#football-quiz)
 
