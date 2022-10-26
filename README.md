@@ -159,7 +159,7 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
        The text of the button clicked by the user turns to black and the border is also removed to give the clicked in button effect.
        ![clicked-buttons](README-images/clicked-buttons.png) 
       
-      - On devices 375 pixels or less the buttons are displayed in 1 column.
+      - On devices 385 pixels or less the buttons are displayed in 1 column.
            
           ![small-screen-buttons](README-images/small-screen-btns.png)
 
@@ -244,7 +244,12 @@ Website developed by Sean Johnston for Code Institute Project Portfolio 2 using 
 ### Validator testing
 
 - No errors were shown when putting the code through the w3c html validator.
-![w3c-validation](README-images/w3c.png)
+
+   - Index.html validation
+    ![w3c-validation](README-images/w3c.png)
+
+   - 404 Page validation
+    ![404-validation](README-images/404w3c.png) 
 
 - No errors were shown when putting the code through the jigsaw css validator.
 ![jigsaw-validation](README-images/jigsaw.png)

@@ -657,5 +657,9 @@ input[type=text] {
         margin-bottom: 5rem;
     }
 
+    .stats-text {
+        font-size: 2rem;
+    }
+    
 
 }
