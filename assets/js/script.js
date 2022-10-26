@@ -72,7 +72,6 @@ function welcomeMessage() {
         alert(`Unknown input ${userNameText}`);
         throw `Unknown input ${userNameText}. Aborting`;
     }
-
 }
 
 /**
@@ -103,7 +102,7 @@ function startGame() {
     statHeader.innerText = `${userNameText}'s current stats:`;
 }
 
-/* FUNCTION PARTLY BUILT FOLLOWING WEB DEV SIMPLIFIED YOUTUBE QUIZ TUTORIAL https://www.youtube.com/watch?v=riDzcEQbX6k */
+/* Show question line of code built following https://www.youtube.com/watch?v=riDzcEQbX6k */
 /**
  * Uses the resetState function to remove any answers and question from the previous question
  * and adds the new shuffled question
@@ -137,7 +136,7 @@ function showQuestion(question) {
     });
 }
 
-/* FUNCTION PARTLY BUILT FOLLOWING WEB DEV SIMPLIFIED YOUTUBE QUIZ TUTORIAL https://www.youtube.com/watch?v=riDzcEQbX6k */
+/* Setting correct dataset to correct answers part of function built following https://www.youtube.com/watch?v=riDzcEQbX6k */
 /**
  * Checks that the users clicked answer has the dataset of correct and if it is increments current score by 1
  * Checks that there is still questions to be displayed and if not gives the user a total score with a message 
@@ -177,7 +176,6 @@ function selectAnswer(e) {
     }
 }
 
-/* FUNCTION PARTLY BUILT FOLLOWING WEB DEV SIMPLIFIED YOUTUBE QUIZ TUTORIAL https://www.youtube.com/watch?v=riDzcEQbX6k */
 /**
  * Shows correct and incorrect answers by color after user click
  */
@@ -212,7 +210,7 @@ function restartGame() {
     alertContainer.classList.remove('alert-container');
 }
 
-/* FUNCTION PARTLY BUILT FOLLOWING WEB DEV SIMPLIFIED YOUTUBE QUIZ TUTORIAL https://www.youtube.com/watch?v=riDzcEQbX6k */
+/* While loop part of function built following https://www.youtube.com/watch?v=riDzcEQbX6k */
 /**
  * Removes next button until answer is clicked and removes previous answers from page
  */

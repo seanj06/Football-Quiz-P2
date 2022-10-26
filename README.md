@@ -342,11 +342,13 @@ However 2 Warnings are recorded 'A leading decimal point can be confused with a 
 
   - The 2 fonts used on this site "Bungee Spice" and "Oswald" taken from [Google Fonts](https://fonts.google.com)
 
-  - Part of the quiz was built following a tutorial from Web Dev simplifieds build a javascript quiz youtube video.( The functions on displaying the shuffled questions, and clicked answers.) Each part of javascript code that was taken has been commented appropriately in the javascript file. https://www.youtube.com/watch?v=riDzcEQbX6k
+  - Part of the quiz was built following a tutorial from Web Dev simplifieds build a javascript quiz youtube video.( The functions on displaying the shuffled questions and clicked answers.) Each part of javascript code that was partly built following this video has been commented appropriately in the javascript file. https://www.youtube.com/watch?v=riDzcEQbX6k
 
 - ### Media 
 
   - The football hero image and background image were taken from [Pexels.com](https://www.pexels.com/)
+
+  - The favicon was taken from [Favicon.io](https://favicon.io/)
 
 - ### Research
 
