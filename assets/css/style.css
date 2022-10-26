@@ -175,7 +175,7 @@ body {
 }
 
 input[type=text] {
-    width: 50vw;
+    width: 40vw;
     margin-top: 50px;
     height: 3vh;
     font-size: 1.5rem;
@@ -337,7 +337,7 @@ input[type=text] {
     background-color: azure;
     color: black;
     font-size: 2rem;
-    width: 15vw;
+    width: 20vw;
 }
 
 .error-container {
