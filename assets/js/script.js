@@ -11,7 +11,6 @@ const playAgainBtn = document.getElementById("play-again-btn");
 // Input Field
 let userNameText = document.getElementById('username').value;
 const userName = document.getElementById('username');
-//const inputField = document.getElementById('name-input');
 const nameLabel = document.getElementById('name-label');
 // Quiz Container
 const questionElement = document.getElementById('question');
